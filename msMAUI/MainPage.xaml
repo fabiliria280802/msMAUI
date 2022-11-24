@@ -2,40 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="msMAUI.MainPage">
-
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-
-            <Image
-                Source="futimag.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
+    <FlexLayout Direction="Column">
+        <FlexLayout FlexLayout.Grow="1" JustifyContent="SpaceBetween">
             <Label
-                Text="¡Bienvenido a Movie Star!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+                   FlexLayout.AlignSelf="Start"
+                   FontSize="18"
+                   WidthRequest="40"
+                   HeightRequest="40"
+                   BackgroundColor="Red"
+                   />
 
-            <Label
-                Text="El lugar perfecto para los fans de las películas, donde encuentras recomendaciones y opiniones de personas de todo el mundo."
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
-    </ScrollView>
-
+        </FlexLayout>
+    </FlexLayout>
 </ContentPage>
