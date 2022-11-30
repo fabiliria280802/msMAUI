@@ -4,19 +4,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="msMAUI.MainPage"
              Title="Movie Star">
-    
-        <!-- BackgroundColor="Green" --> 
-        <FlexLayout Direction="Column">
-            <FlexLayout FlexLayout.Grow="1" JustifyContent="SpaceBetween">
-                <Label
-                    FlexLayout.AlignSelf="Start"
-                    FontSize="18"
-                    WidthRequest="40"
-                    HeightRequest="40"
-                    BackgroundColor="Red"
-                />
-            </FlexLayout>
-        </FlexLayout>
+
+    <!-- BackgroundColor="Green" -->
+    <VerticalStackLayout
+        Spacing="25"
+        Padding="30,0"
+        VerticalOptions="Center">
+        <!--Image
+        / Source=".png"
+        />-->
+        <Label
+            Text="¡Bienvenido a Movie Star!"
+            SemanticProperties.HeadingLevel="Level1"
+            FontSize="32"
+            HorizontalOptions="Center"
+            />
+
+        <Label
+            Text="El lugar perfecto para los fans de las películas, donde encuentras recomendaciones y opiniones de personas de todo el mundo."
+            SemanticProperties.HeadingLevel="Level2"
+            FontSize="22"
+            HorizontalOptions="Center"
+            />
+
+        <Button
+            Text="Ver catalogo"
+            TextColor="White"
+            BackgroundColor="Blue"
+            />
+
+        <Label
+            Text=""
+            SemanticProperties.HeadingLevel="Level3"
+            FontSize="12"
+            HorizontalOptions="Start"
+            />
+    </VerticalStackLayout>
 </ContentPage>
-    
+
 
