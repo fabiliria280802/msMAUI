@@ -9,9 +9,9 @@ public partial class MainPage : ContentPage
         InitializeComponent();
     }
 
-    Image image = new Image
+    /*Image image = new Image
     {
         Source = ImageSource.FromFile("")
-    };
+    };*/
 }
 

@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="msMAUI.Views.MainPage"
              Title="Movie Star">
@@ -9,11 +8,11 @@
     <FlexLayout Direction="Column">
         <FlexLayout FlexLayout.Grow="1" JustifyContent="SpaceBetween">
             <Label
-                    FlexLayout.AlignSelf="Start"
-                    FontSize="18"
-                    WidthRequest="40"
-                    HeightRequest="40"
-                    BackgroundColor="Red"
+                FlexLayout.AlignSelf="Start"
+                FontSize="18"
+                WidthRequest="40"
+                HeightRequest="40"
+                BackgroundColor="Red"
                 />
         </FlexLayout>
     </FlexLayout>
