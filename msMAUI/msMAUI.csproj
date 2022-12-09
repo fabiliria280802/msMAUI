@@ -49,7 +49,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Folder Include="Models\" />
+		<Compile Update="Views\MoviesPage.xaml.cs">
+			<DependentUpon>MoviesPage.xaml</DependentUpon>
+		</Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -59,7 +61,7 @@
 		<MauiXaml Update="Views\UsersPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Views\XPage.xaml">
+		<MauiXaml Update="Views\MoviesPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 	</ItemGroup>
