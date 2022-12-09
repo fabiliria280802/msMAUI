@@ -1,4 +1,4 @@
-﻿namespace msMAUI;
+﻿namespace msMAUI.Views;
 
 public partial class MainPage : ContentPage
 {
