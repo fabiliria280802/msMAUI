@@ -8,5 +8,6 @@ namespace msMAUI.Models
 {
     internal class Movies
     {
+
     }
 }
