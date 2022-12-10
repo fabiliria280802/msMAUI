@@ -9,7 +9,7 @@
         <ShellContent
             Title="Home"
             ContentTemplate="{DataTemplate views:MainPage}"
-            />
+            Icon="homepage"/>
 
         <ShellContent
             Title="About"
@@ -19,12 +19,12 @@
         <ShellContent
             Title="All movies"
             ContentTemplate="{DataTemplate views:AllMoviesPage}"
-            />
+            Icon="moviereel"/>
 
         <ShellContent
             Title="Movies"
             ContentTemplate="{DataTemplate views:MoviePage}"
-            />
+            Icon="play"/>
     </TabBar>
 
 
