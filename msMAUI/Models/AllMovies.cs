@@ -1,5 +1,7 @@
-using Java.Lang;
-using System;
+﻿using System;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
@@ -30,9 +32,9 @@ namespace msMAUI.Models
                                             Filename = filename,
                                             title = File.ReadAllText(filename),
                                             time = DateTime.Parse(File.ReadAllText(filename)),
-                                            year = Integer.ParseInt((File.ReadAllText(filename))),
+                                            year = int.Parse((File.ReadAllText(filename))),
                                             director = File.ReadAllText(filename),
-                                            shortFilm = Java.Lang.Boolean.ParseBoolean(File.ReadAllText(filename)),
+                                            shortFilm = Convert.ToBoolean(File.ReadAllText(filename)),
                                             income = Decimal.Parse(File.ReadAllText(filename)),
                                             distributor = File.ReadAllText(filename),
                                             gender = File.ReadAllText(filename),
@@ -41,7 +43,7 @@ namespace msMAUI.Models
                                         })
 
                                         // With the final collection of notes, order them by date
-                                        .OrderBy(note => note.year);
+                                        .OrderBy(movie => movie.year);
 
             // Add each note into the ObservableCollection
             foreach (Movie movie in movies)

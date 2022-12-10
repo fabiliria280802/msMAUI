@@ -5,17 +5,48 @@
              Title="Movie Star">
 
     <!-- BackgroundColor="Green" -->
-    <FlexLayout Direction="Column">
-        <FlexLayout FlexLayout.Grow="1" JustifyContent="SpaceBetween">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
             <Label
-                FlexLayout.AlignSelf="Start"
+                Text="Bienvenido a la Matrix!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="¿Alguna vez has tenido un sueño, Neo, del que estabas tan seguro de que era real? ¿Qué pasaría si no pudieras despertar de ese sueño? ¿Cómo sabrías la diferencia entre el mundo de los sueños y el mundo real?"
+                TextColor="Green"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
-                WidthRequest="40"
-                HeightRequest="40"
-                BackgroundColor="Red"
-                />
-        </FlexLayout>
-    </FlexLayout>
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="-Morpheus"
+                TextColor="Green"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Start" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Matrix"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
 
 
