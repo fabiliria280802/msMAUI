@@ -56,6 +56,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="Plugin.ValidationRules" Version="1.5.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<Compile Update="Views\MoviePage.xaml.cs">
 			<DependentUpon>MoviePage.xaml</DependentUpon>
 		</Compile>
@@ -74,6 +78,10 @@
 		<MauiXaml Update="Views\MoviePage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Validations\" />
 	</ItemGroup>
 
 </Project>
