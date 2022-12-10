@@ -63,6 +63,9 @@
 		<Compile Update="Views\MoviePage.xaml.cs">
 			<DependentUpon>MoviePage.xaml</DependentUpon>
 		</Compile>
+		<Compile Update="Views\UserPage.xaml.cs">
+		  <DependentUpon>UserPage.xaml</DependentUpon>
+		</Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -72,7 +75,7 @@
 		<MauiXaml Update="Views\AllMoviesPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Views\UsersPage.xaml">
+		<MauiXaml Update="Views\UserPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Views\MoviePage.xaml">
