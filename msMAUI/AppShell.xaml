@@ -17,8 +17,13 @@
             Icon="icon_about1" />
 
         <ShellContent
-            Title="Notes"
+            Title="All movies"
             ContentTemplate="{DataTemplate views:AllMoviesPage}"
+            />
+
+        <ShellContent
+            Title="Movies"
+            ContentTemplate="{DataTemplate views:MoviePage}"
             />
     </TabBar>
 
