@@ -1,13 +1,7 @@
-﻿using Android.Graphics;
 using Java.Lang;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Google.Crypto.Tink.Subtle;
-using static Android.Provider.ContactsContract.CommonDataKinds;
 
 namespace msMAUI.Models
 {
