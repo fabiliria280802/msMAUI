@@ -12,9 +12,14 @@
             Icon="homepage"/>
 
         <ShellContent
-            Title="About"
-            ContentTemplate="{DataTemplate views:AboutPage}"
-            Icon="icon_about1" />
+            Title="Users"
+            ContentTemplate="{DataTemplate views:UsersPage}"
+            Icon="user"/>
+
+        <ShellContent
+            Title="Movies"
+            ContentTemplate="{DataTemplate views:MoviePage}"
+            Icon="play"/>
 
         <ShellContent
             Title="All movies"
@@ -22,10 +27,8 @@
             Icon="moviereel"/>
 
         <ShellContent
-            Title="Movies"
-            ContentTemplate="{DataTemplate views:MoviePage}"
-            Icon="play"/>
+            Title="About"
+            ContentTemplate="{DataTemplate views:AboutPage}"
+            Icon="infobutton" />
     </TabBar>
-
-
 </Shell>

@@ -49,10 +49,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\homepage.png" />
-	  <None Remove="Resources\Images\icon_about1.png" />
-	  <None Remove="Resources\Images\moviereel.png" />
-	  <None Remove="Resources\Images\play.png" />
+		<None Remove="Resources\Images\homepage.png" />
+		<None Remove="Resources\Images\infobutton.png" />
+		<None Remove="Resources\Images\moviereel.png" />
+		<None Remove="Resources\Images\play.png" />
+		<None Remove="Resources\Images\user.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -66,7 +67,7 @@
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Views\AllMoviesPage.xaml">
-		  <Generator>MSBuild:Compile</Generator>
+			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Views\UsersPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
