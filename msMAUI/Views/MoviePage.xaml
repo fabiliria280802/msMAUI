@@ -36,7 +36,7 @@
                     Placeholder="Ingresar texto"
                     Text="{Binding Text}"
                     TextColor="BlueViolet"/>
-            <Grid ColumnDefinitions="*,*" ColumnSpacing="4" Margin="10,5,10,10" HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="4" Margin="10,0,10,10" HorizontalOptions="Center" VerticalOptions="Center">
                 <Label Text="Dar Click al cuadrado si es un cortometraje:" VerticalOptions="Center"/>
                 <CheckBox x:Name="e5" Grid.Column="1" Color="BlueViolet">
 
@@ -45,11 +45,13 @@
             <Label Text="Ingresar la recaudación de la película:" />
             <Editor x:Name="e6"
                     Keyboard="Numeric"
+                    PlaceholderColor="BlueViolet"
                     Placeholder="Ingresar texto"
                     Text="{Binding Text}"
                     TextColor="BlueViolet"/>
             <Label Text="Ingresar el nombre del distribuidor de la película:" />
             <Editor x:Name="e7"
+                    PlaceholderColor="BlueViolet"
                     Placeholder="Ingresar texto"
                     Text="{Binding Text}"
                     TextColor="BlueViolet"/>
@@ -60,7 +62,8 @@
                     ItemDisplayBinding="{Binding Text}"
                     TextColor="BlueViolet"
                     VerticalOptions="CenterAndExpand"
-                    Margin="10, 0"
+                    HorizontalOptions="StartAndExpand"
+                    Margin="10,0,10,10"
                     SelectedIndexChanged="e8_SelectedIndexChanged"
                     >
                 <Picker.Items>
@@ -78,8 +81,11 @@
                 x:Name="e9"
                 Title="Seleccione"
                 TitleColor="Violet"
+                ItemDisplayBinding="{Binding Text}"
+                TextColor="BlueViolet"
                 VerticalOptions="CenterAndExpand"
-                Margin="10, 0"
+                HorizontalOptions="StartAndExpand"
+                Margin="10,0,10,10"
                 SelectedIndexChanged="e9_SelectedIndexChanged">
                 <Picker.Items>
                     <x:String>TP</x:String>
@@ -89,6 +95,7 @@
             </Picker>
             <Label Text="Ingresar la sinopsis de la película:" />
             <Editor x:Name="e10"
+                    PlaceholderColor="BlueViolet"
                     Placeholder="Ingresar texto"
                     Text="{Binding Text}"
                     TextColor="BlueViolet"
