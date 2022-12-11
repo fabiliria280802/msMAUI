@@ -3,21 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="msMAUI.Views.AllMoviesPage"
              Title="AllMoviesPage">
-    <!-- Add an item to the toolbar
+    <!-- Add an item to the toolbar-->
     <ContentPage.ToolbarItems>
-    <ToolbarItem Text="Add" Clicked="Add_Clicked" IconImageSource="{FontImage Glyph='+', Color=White, Size=22}" />
+        <ToolbarItem Text="Add" Clicked="Add_Clicked" IconImageSource="{FontImage Glyph='+', Color=White, Size=22}" />
     </ContentPage.ToolbarItems>
-    Display notes in a list
+    <!--Display notes in a list-->
     <CollectionView x:Name="moviesCollection"
     ItemsSource="{Binding Movies}"
     Margin="20"
     SelectionMode="Single"
+                    
     SelectionChanged="moviesCollection_SelectionChanged">
 
-    Designate how the collection of items are laid out
-    <CollectionView.ItemsLayout>
-    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
-    </CollectionView.ItemsLayout>
+        <!--Designate how the collection of items are laid out-->
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
+        </CollectionView.ItemsLayout>
         <!-- Define the appearance of each item in the list -->
         <CollectionView.ItemTemplate>
             <DataTemplate>
@@ -32,7 +33,6 @@
                     <Label Text="{Binding gender}" FontSize="14" TextColor="Silver"/>
                     <Label Text="{Binding classification}" FontSize="14" TextColor="Silver"/>
                     <Label Text="{Binding synopsis}" FontSize="14" TextColor="Silver"/>
-                    -->
                 </StackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>

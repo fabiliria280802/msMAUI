@@ -9,13 +9,13 @@ namespace msMAUI.Models
 {
     internal class Movie
     {
-        public string Filename { get; set; }
+        /*public string Filename { get; set; }
 
         public Image image { get; set; }
 
         public string title { get; set; }
 
-        public DateTime time { get; set; }
+        public DateTime time { get; set; }*/
 
         /*public int year { get; set; }
 
