@@ -1,10 +1,13 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="msMAUI.Views.LoginPage"
              Title="LoginPage">
     <VerticalStackLayout>
-        <Image Source="" WidthRequest="180" HeightRequest="180"></Image>
+        <Image
+                Source="/Resources/Styles/moviestarneo.png"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
         <Entry x:Name="userEntry" Keyboard="Default" Grid.Row="0" Placeholder="Usuario:"/>
         <Entry x:Name="passEntry" IsPassword="True" Keyboard="Numeric" Grid.Row="1" Placeholder="Contraseña:"/>
         <Button Text="Iniciar sesión" Clicked="Button_Clicked" Grid.Row="2"/>
