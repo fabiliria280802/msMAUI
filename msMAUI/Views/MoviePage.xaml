@@ -15,12 +15,13 @@
                     PlaceholderColor="BlueViolet"
                     Text="{Binding Text}"
                     TextColor="BlueViolet"/>
-            <!--
+
             <Label Text="Ingresar duración de la película:" />
-            <Editor x:Name="e2"
-            Placeholder="Ingresar texto"
-            PlaceholderColor="BlueViolet"
-            Text="{Binding Text}"
+            <!--
+            <TimePicker x:Name="e2"
+                        Time="{Binding Text}"
+                        Format="HH:mm"
+                        
             TextColor="BlueViolet"/>
             -->
             <Label Text="Ingresar año de la película:" />

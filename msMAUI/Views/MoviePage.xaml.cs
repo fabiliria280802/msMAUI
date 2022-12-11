@@ -21,6 +21,11 @@ public partial class MoviePage : ContentPage
         try
         {
             int num = int.Parse(e3.Text);
+            //DateTime. duraccion = e2.Time;
+            //DateTime result1 = DateTime.Parse("00:40");
+            //DateTime result2 = DateTime.Parse("06:00");
+            //int resu = DateTime.Compare(time1, result1);
+            //int resu1 = DateTime.Compare(time1, result2);
             decimal num2 = decimal.Parse(e6.Text);
             string recaudacion;
             string anio;
@@ -56,8 +61,21 @@ public partial class MoviePage : ContentPage
                 }
             } while (recaudacion.Equals(""));
 
-            aux = 1;
-            string text = "Titulo: " + e1.Text + "\nAño: " + anio + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
+            /*do
+            {
+                if (duraccion > 0)
+                {
+                    var duraccion = e2.Time;
+                }
+                else
+                {
+                    recaudacion = "";
+                    await DisplayAlert("Alerta:", "No puede ingresar un valor menor a 40min o mayor a 6horas y 30min.", "OK");
+                }
+            } while (recaudacion.Equals(""));*/
+
+            //aux = 1;
+            string text = "Titulo: " + e1.Text+ /*"Duración: " + e2.Time +*/ "\nAño: " + anio + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
             + "\nRecaudacion: " + e6.Text + "\nDistribuidor: " + e7.Text + "\nGenero: " + e8.Items[e8.SelectedIndex]
             + "\nClasificacion: " + e9.Items[e9.SelectedIndex] + "\nSinopsis: " + e10.Text;
             if (BindingContext is Models.Movie movie)
