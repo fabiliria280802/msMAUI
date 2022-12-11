@@ -15,9 +15,9 @@
                     PlaceholderColor="BlueViolet"
                     Text="{Binding Text}"
                     TextColor="BlueViolet"/>
-
-            <Label Text="Ingresar duración de la película:" />
             <!--
+            <Label Text="Ingresar duración de la película:" />
+
             <TimePicker x:Name="e2"
             Time="{Binding Text}"
             Format="HH:mm"
@@ -105,13 +105,11 @@
             <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
                 <Button Text="Save"
                         BackgroundColor="BlueViolet"
-                        TextColor="White"
                         Clicked="SaveButton_Clicked"
                         />
                 <Button Grid.Column="1"
                         Text="Delete"
                         BackgroundColor="BlueViolet"
-                        TextColor="White"
                         Clicked="DeleteButton_Clicked"
                         />
             </Grid>

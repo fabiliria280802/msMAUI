@@ -17,7 +17,8 @@ public partial class AllMoviesPage : ContentPage
     {
         try
         {
-            //await Shell.Current.GoToAsync(nameof(MoviePage));
+
+            Shell.Current.GoToAsync(nameof(MoviePage));
             //await Shell.Current.GoToAsync(nameof(MoviePage));
         }
         catch (ArgumentException ae)
