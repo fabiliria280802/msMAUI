@@ -14,15 +14,16 @@ namespace msMAUI.Models
         //public Image image { get; set; }
 
         public string title { get; set; }
+        public DateTime Date { get; set; }
 
         //public DateTime time { get; set; }*/
 
-        public int year { get; set; }
+        public string year { get; set; }
 
         public string director { get; set; }
 
         public string shortFilm { get; set; }
-        public decimal income { get; set; }
+        public string income { get; set; }
 
         public string distributor { get; set; }
         public string gender { get; set; }

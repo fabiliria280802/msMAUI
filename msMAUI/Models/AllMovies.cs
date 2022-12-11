@@ -31,11 +31,12 @@ namespace msMAUI.Models
                                         {
                                             Filename = filename,
                                             title = File.ReadAllText(filename),
+                                            Date = File.GetCreationTime(filename),
                                             //time = DateTime.Parse(File.ReadAllText(filename)),
-                                            year = int.Parse((File.ReadAllText(filename))),
+                                            year = File.ReadAllText(filename),
                                             director = File.ReadAllText(filename),
                                             shortFilm = File.ReadAllText(filename),
-                                            income = Decimal.Parse(File.ReadAllText(filename)),
+                                            income = File.ReadAllText(filename),
                                             distributor = File.ReadAllText(filename),
                                             gender = File.ReadAllText(filename),
                                             classification = File.ReadAllText(filename),
@@ -43,7 +44,7 @@ namespace msMAUI.Models
                                         })
 
                                         // With the final collection of notes, order them by date
-                                        .OrderBy(movie => movie.year);
+                                        .OrderBy(movie => movie.Date);
 
             // Add each note into the ObservableCollection
             foreach (Movie movie in movies)

@@ -20,16 +20,23 @@ public partial class AllMoviesPage : ContentPage
 
     private async void moviesCollection_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-        if (e.CurrentSelection.Count != 0)
+        try
         {
-            // Get the note model
-            var movie = (Models.Movie)e.CurrentSelection[0];
+            if (e.CurrentSelection.Count != 0)
+            {
+                // Get the note model
+                var movie = (Models.Movie)e.CurrentSelection[0];
 
-            // Should navigate to "NotePage?ItemId=path\on\device\XYZ.notes.txt"
-            await Shell.Current.GoToAsync($"{nameof(MoviePage)}?{nameof(MoviePage.ItemId)}={movie.Filename}");
+                // Should navigate to "NotePage?ItemId=path\on\device\XYZ.notes.txt"
+                await Shell.Current.GoToAsync($"{nameof(MoviePage)}?{nameof(MoviePage.ItemId)}={movie.Filename}");
 
-            // Unselect the UI
-            moviesCollection.SelectedItem = null;
+                // Unselect the UI
+                moviesCollection.SelectedItem = null;
+            }
+        }
+        catch (System.Reflection.TargetInvocationException xe)
+        {
+            DisplayAlert("Alerta: ", "No entra en allpages", "OK");
         }
     }
 }

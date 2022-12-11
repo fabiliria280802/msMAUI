@@ -53,10 +53,10 @@ public partial class MoviePage : ContentPage
         {
             movieModel.title = File.ReadAllText(fileName);
             //movieModel.time = DateTime.Parse(File.ReadAllText(fileName));
-            movieModel.year = int.Parse(File.ReadAllText(fileName));
+            movieModel.year = File.ReadAllText(fileName);
             movieModel.director = File.ReadAllText(fileName);
             movieModel.shortFilm = File.ReadAllText(fileName);
-            movieModel.income = Decimal.Parse(File.ReadAllText(fileName));
+            movieModel.income = File.ReadAllText(fileName);
             movieModel.distributor = File.ReadAllText(fileName);
             movieModel.gender = File.ReadAllText(fileName);
             movieModel.classification = File.ReadAllText(fileName);
