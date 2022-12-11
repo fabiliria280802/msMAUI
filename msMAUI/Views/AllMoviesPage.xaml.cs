@@ -19,7 +19,6 @@ public partial class AllMoviesPage : ContentPage
     {
         try
         {
-
             await Navigation.PushAsync(new MoviePage());
         }
         catch (ArgumentException ae)

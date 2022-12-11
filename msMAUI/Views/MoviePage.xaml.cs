@@ -75,13 +75,14 @@ public partial class MoviePage : ContentPage
             } while (recaudacion.Equals(""));*/
 
             //aux = 1;
-            string text = "Titulo: " + e1.Text+ /*"Duración: " + e2.Time +*/ "\nAño: " + anio + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
+            string text = "Titulo: " + e1.Text + /*"Duración: " + e2.Time +*/ "\nAño: " + anio + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
             + "\nRecaudacion: " + e6.Text + "\nDistribuidor: " + e7.Text + "\nGenero: " + e8.Items[e8.SelectedIndex]
             + "\nClasificacion: " + e9.Items[e9.SelectedIndex] + "\nSinopsis: " + e10.Text;
             if (BindingContext is Models.Movie movie)
                 File.WriteAllText(movie.Filename, text);
             await DisplayAlert("Alerta:", "Se guardo correctamente la película llamada " + e1.Text, "Ok");
-            await Shell.Current.GoToAsync("..");
+            await Navigation.PushAsync(new AllMoviesPage());
+            //await Shell.Current.GoToAsync("..");
         }
         catch (ArgumentNullException nre)
         {
