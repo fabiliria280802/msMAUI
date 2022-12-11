@@ -13,12 +13,12 @@
 
         <ShellContent
             Title="Nuevo"
-            ContentTemplate="{DataTemplate views:LoginPage}"
+            ContentTemplate="{DataTemplate views:MoviePage}"
             Icon="user"/>
 
         <ShellContent
             Title="Biblioteca"
-            ContentTemplate="{DataTemplate views:MoviePage}"
+            ContentTemplate="{DataTemplate views:AllMoviesPage}"
             Icon="play"/>
 
         <ShellContent
