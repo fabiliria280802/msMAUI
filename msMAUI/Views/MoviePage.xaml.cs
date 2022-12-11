@@ -18,18 +18,27 @@ public partial class MoviePage : ContentPage
 
     private async void SaveButton_Clicked(object sender, EventArgs e)
     {
-
+        int num = int.Parse(e3.Text);
+        string anio;
         string shortFilm;
         if (e5.IsChecked)
             shortFilm = "Si";
         else
             shortFilm = "No";
-
+        if (num > 1989 && num <= 2022)
+        {
+            anio = e3.Text;
+        }
+        else
+        {
+            DisplayAlert("Alerta:", "No habia peliculas antes de 1989 o no puedes ingresar una pelicula despues del 2022", "OK");
+        }
         string text = "Titulo: " + e1.Text + "\nAño: " + e3.Text + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
             + "\nRecaudacion: " + e6.Text + "\nDistribuidor: " + e7.Text + "\nGenero: " + e8.Items[e8.SelectedIndex]
             + "\nClasificacion: " + e9.Items[e9.SelectedIndex] + "\nSinopsis: " + e10.Text;
         if (BindingContext is Models.Movie movie)
             File.WriteAllText(movie.Filename, text);
+        DisplayAlert("Alerta:", "Se guardo un archivo llamado" + e1.Text, "Ok");
         await Shell.Current.GoToAsync("..");
     }
 
