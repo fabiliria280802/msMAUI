@@ -17,7 +17,7 @@
             Icon="user"/>
 
         <ShellContent
-            Title="Movies"
+            Title="Movie"
             ContentTemplate="{DataTemplate views:MoviePage}"
             Icon="play"/>
 

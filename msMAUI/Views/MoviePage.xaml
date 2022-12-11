@@ -2,89 +2,113 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="msMAUI.Views.MoviePage"
-             Title="MoviePage">
-    <VerticalStackLayout>
-        <Label Text="Ingresar nombre de la película:" />
-        <Editor x:Name="e1"
-                PlaceholderColor="White"
-                Text="{Binding Text}"
-                TextColor="BlueViolet"/>
-        <Label Text="Ingresar dureción de la película:" />
-        <Editor x:Name="e2"
-                PlaceholderColor="White"
-                Text="{Binding Text}"
-                TextColor="BlueViolet"/>
-        <Label Text="Ingresar año de la película:" />
-        <Editor x:Name="e3"
-                Text="{Binding Text}"
-                TextColor="BlueViolet"/>
-        <Label Text="Ingresar director de la película:" />
-        <Editor x:Name="e4"
-                Text="{Binding Text}"
-                TextColor="BlueViolet"/>
-        <Label Text="Mover el switch si es un cortometraje:" />
-        <Switch x:Name="sw1"
-                HorizontalOptions="Start"
-                IsToggled="False"
-                OnColor="BlueViolet"
-                BackgroundColor="Transparent"
-                />
-        <Label Text="Ingresar la recaudación de la película:" />
-        <Editor x:Name="e5"
-                Text="{Binding Text}"
-                TextColor="BlueViolet"/>
-        <Label Text="Ingresar el nombre del distribuidor de la película:" />
-        <Editor x:Name="e6"
-                Text="{Binding Text}"
-                TextColor="BlueViolet"/>
-        <Label Text="Escoge el genero de la película:" />
-        <Picker x:Name="e7"
-                Title="Selecciona el genero de la  película:"
-                ItemDisplayBinding="{Binding Text}"
-                TextColor="BlueViolet"
-                SelectedIndexChanged="e7_SelectedIndexChanged"
-                >
-            <Picker.Items>
-                <!--
-                <x:Array Type="{x:Type x:String}">
-                <x:String>Acción</x:String>
-                <x:String>Musical</x:String>
-                <x:String>Aventura</x:String>
-                <x:String>Ciencia Ficción</x:String>
-                <x:String>Terror</x:String>
-                <x:String>Misterio</x:String>
-                <x:String>Comedia</x:String>
-                </x:Array>
-                -->
-            </Picker.Items>
-        </Picker>
-        <Label Text="Ingresar el nombre del distribuidor de la película:" />
-        <Editor x:Name="e8"
-                Placeholder="Ingresar texto"
-                Text="{Binding Text}"
-                TextColor="BlueViolet"
-                />
-        <Label Text="Ingresar el nombre del distribuidor de la película:" />
-        <Editor x:Name="e9"
-                Placeholder="Ingresar texto"
-                Text="{Binding Text}"
-                TextColor="BlueViolet"
-                />
-        <Label Text="Ingresar el nombre del distribuidor de la película:" />
-        <Editor x:Name="e10"
-                Placeholder="Ingresar texto"
-                Text="{Binding Text}"
-                TextColor="BlueViolet"
-                />
-        <!--
-        <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
-        <Button Text="Save"
-        Clicked="SaveButton_Clicked" />
+             Title="Movie">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="INFORMACIÓN GENERAL"
+                   HorizontalOptions="Center"
+                   FontSize="Title"
+                   TextColor="BlueViolet"/>
+            <Label Text="Ingresar nombre de la película:" />
+            <Editor x:Name="e1"
+                    Placeholder="Ingresar texto"
+                    PlaceholderColor="BlueViolet"
+                    Text="{Binding Text}"
+                    TextColor="BlueViolet"/>
+            <Label Text="Ingresar duración de la película:" />
+            <Editor x:Name="e2"
+                    Placeholder="Ingresar texto"
+                    PlaceholderColor="BlueViolet"
+                    Text="{Binding Text}"
+                    TextColor="BlueViolet"/>
+            <Label Text="Ingresar año de la película:" />
+            <Editor x:Name="e3"
+                    PlaceholderColor="BlueViolet"
+                    Placeholder="Ingresar texto"
+                    Text="{Binding Text}"
+                    TextColor="BlueViolet"/>
+            <Label Text="Ingresar director de la película:" />
+            <Editor x:Name="e4"
+                    PlaceholderColor="BlueViolet"
+                    Placeholder="Ingresar texto"
+                    Text="{Binding Text}"
+                    TextColor="BlueViolet"/>
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="4" Margin="10,5,10,10" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="Mover el switch si es un cortometraje:" VerticalOptions="Center"/>
+                <Switch x:Name="sw1"
+                        Grid.Column="1"
+                        HorizontalOptions="Start"
+                        IsToggled="False"
+                        OnColor="BlueViolet"
+                        BackgroundColor="Transparent"
+                        />
+            </Grid>
 
-        <Button Grid.Column="1"
-        Text="Delete"
-        Clicked="DeleteButton_Clicked" />
-        </Grid>
-        -->
-    </VerticalStackLayout>
+            <Label Text="Ingresar la recaudación de la película:" />
+            <Editor x:Name="e5"
+                    Placeholder="Ingresar texto"
+                    Text="{Binding Text}"
+                    TextColor="BlueViolet"/>
+            <Label Text="Ingresar el nombre del distribuidor de la película:" />
+            <Editor x:Name="e6"
+                    Placeholder="Ingresar texto"
+                    Text="{Binding Text}"
+                    TextColor="BlueViolet"/>
+            <Label Text="Escoge el genero de la película:" />
+            <Picker x:Name="e7"
+                    Title="Seleccionar"
+                    TitleColor="Violet"
+                    ItemDisplayBinding="{Binding Text}"
+                    TextColor="BlueViolet"
+                    SelectedIndexChanged="e7_SelectedIndexChanged"
+                    >
+                <Picker.Items>
+                    <!--
+                    <x:Array Type="{x:Type x:String}">
+                    <x:String>Acción</x:String>
+                    <x:String>Musical</x:String>
+                    <x:String>Aventura</x:String>
+                    <x:String>Ciencia Ficción</x:String>
+                    <x:String>Terror</x:String>
+                    <x:String>Misterio</x:String>
+                    <x:String>Comedia</x:String>
+                    </x:Array>
+                    -->
+                </Picker.Items>
+            </Picker>
+            <Label Text="Ingresar el nombre del distribuidor de la película:" />
+            <Editor x:Name="e8"
+                    Placeholder="Ingresar texto"
+                    Text="{Binding Text}"
+                    TextColor="BlueViolet"
+                    />
+            <Label Text="Ingresar el nombre del distribuidor de la película:" />
+            <Editor x:Name="e9"
+                    Placeholder="Ingresar texto"
+                    Text="{Binding Text}"
+                    TextColor="BlueViolet"
+                    />
+            <Label Text="Ingresar el nombre del distribuidor de la película:" />
+            <Editor x:Name="e10"
+                    Placeholder="Ingresar texto"
+                    Text="{Binding Text}"
+                    TextColor="BlueViolet"
+                    />
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
+                <Button Text="Save"
+                        BackgroundColor="BlueViolet"
+                        TextColor="White"
+                        Clicked="SaveButton_Clicked"
+                        />
+                <Button Grid.Column="1"
+                        Text="Delete"
+                        BackgroundColor="BlueViolet"
+                        TextColor="White"
+                        Clicked="DeleteButton_Clicked"
+                        />
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
 </ContentPage>
