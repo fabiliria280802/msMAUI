@@ -29,21 +29,21 @@ namespace msMAUI.Models
                                         // Each file name is used to create a new Note
                                         .Select(filename => new Movie()
                                         {
-                                            //Filename = filename,
-                                            /*title = File.ReadAllText(filename),
-                                            time = DateTime.Parse(File.ReadAllText(filename)),
+                                            Filename = filename,
+                                            title = File.ReadAllText(filename),
+                                            //time = DateTime.Parse(File.ReadAllText(filename)),
                                             year = int.Parse((File.ReadAllText(filename))),
                                             director = File.ReadAllText(filename),
-                                            shortFilm = Convert.ToBoolean(File.ReadAllText(filename)),
+                                            shortFilm = File.ReadAllText(filename),
                                             income = Decimal.Parse(File.ReadAllText(filename)),
                                             distributor = File.ReadAllText(filename),
                                             gender = File.ReadAllText(filename),
                                             classification = File.ReadAllText(filename),
-                                            synopsis = File.ReadAllText(filename) */
-                                        });
+                                            synopsis = File.ReadAllText(filename)
+                                        })
 
-            // With the final collection of notes, order them by date
-            //.OrderBy(movie => movie.title);
+                                        // With the final collection of notes, order them by date
+                                        .OrderBy(movie => movie.year);
 
             // Add each note into the ObservableCollection
             foreach (Movie movie in movies)

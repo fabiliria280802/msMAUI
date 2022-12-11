@@ -24,7 +24,9 @@
             <DataTemplate>
                 <StackLayout>
                     <Label Text="{Binding title}" FontSize="22"/>
+                    <!--
                     <Label Text="{Binding time}" FontSize="14" TextColor="Silver"/>
+                    -->
                     <Label Text="{Binding year}" FontSize="14" TextColor="Silver"/>
                     <Label Text="{Binding director}" FontSize="14" TextColor="Silver"/>
                     <Label Text="{Binding shortFilm}" FontSize="14" TextColor="Silver"/>
