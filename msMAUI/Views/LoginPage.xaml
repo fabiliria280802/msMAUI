@@ -4,16 +4,17 @@
              x:Class="msMAUI.Views.LoginPage"
              Title="LoginPage">
     <VerticalStackLayout>
-        <Grid VerticalOptions="CenterAndExpand">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Entry x:Name="userEntry" Keyboard="Default" Grid.Row="0" Placeholder="Usuario:"/>
-            <Entry x:Name="passEntry" IsPassword="True" Keyboard="Numeric" Grid.Row="1" Placeholder="Contraseña:"/>
-            <Button Text="Iniciar sesión" Clicked="Button_Clicked" Grid.Row="2"/>
-        </Grid>
-
+        <Image Source="" WidthRequest="180" HeightRequest="180"></Image>
+        <Entry x:Name="userEntry" Keyboard="Default" Grid.Row="0" Placeholder="Usuario:"/>
+        <Entry x:Name="passEntry" IsPassword="True" Keyboard="Numeric" Grid.Row="1" Placeholder="Contraseña:"/>
+        <Button Text="Iniciar sesión" Clicked="Button_Clicked" Grid.Row="2"/>
+        <Label HorizontalOptions="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="No tienes una cuenta?" TextColor="White"/>
+                    <Span Text="Register" TextColor="White" FontAttributes="Bold" TextDecorations="Underline"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
     </VerticalStackLayout>
 </ContentPage>
