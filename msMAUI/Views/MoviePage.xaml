@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
              x:Class="msMAUI.Views.MoviePage"
              Title="MoviePage">
     <VerticalStackLayout>
@@ -13,6 +14,7 @@
              TextChanged="OnEntryTextChanged"
              Completed="OnEntryCompleted" />
         <Entry x:Name="e3"
+             Keyboard="Numeric"
              Placeholder="Ingresar texto"
              TextChanged="OnEntryTextChanged"
              Completed="OnEntryCompleted" />
@@ -20,11 +22,11 @@
              Placeholder="Ingresar texto"
              TextChanged="OnEntryTextChanged"
              Completed="OnEntryCompleted" />
-        <Entry x:Name="e5"
-             Placeholder="Ingresar texto"
-             TextChanged="OnEntryTextChanged"
-             Completed="OnEntryCompleted" />
+        <CheckBox x:Name="e5"
+                  >
+        </CheckBox>
         <Entry x:Name="e6"
+             Keyboard="Numeric"
              Placeholder="Ingresar texto"
              TextChanged="OnEntryTextChanged"
              Completed="OnEntryCompleted" />
@@ -32,14 +34,28 @@
              Placeholder="Ingresar texto"
              TextChanged="OnEntryTextChanged"
              Completed="OnEntryCompleted" />
-        <Entry x:Name="e8"
-             Placeholder="Ingresar texto"
-             TextChanged="OnEntryTextChanged"
-             Completed="OnEntryCompleted" />
-        <Entry x:Name="e9"
-             Placeholder="Ingresar texto"
-             TextChanged="OnEntryTextChanged"
-             Completed="OnEntryCompleted" />
+        <Picker
+                x:Name="e8"
+                Title="Seleccione un genero"
+                VerticalOptions="CenterAndExpand"
+                Margin="10, 0">
+            <Picker.Items>
+                <x:String>Accion</x:String>
+                <x:String>Terror</x:String>
+                <x:String>Comedia</x:String>
+            </Picker.Items>
+        </Picker>
+        <Picker
+                x:Name="e9"
+                Title="Seleccione una clasificacion"
+                VerticalOptions="CenterAndExpand"
+                Margin="10, 0">
+            <Picker.Items>
+                <x:String>TP</x:String>
+                <x:String>16+</x:String>
+                <x:String>18+</x:String>
+            </Picker.Items>
+        </Picker>
         <Entry x:Name="e10"
              Placeholder="Ingresar texto"
              TextChanged="OnEntryTextChanged"

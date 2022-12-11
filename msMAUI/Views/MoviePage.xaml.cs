@@ -16,15 +16,24 @@ public partial class MoviePage : ContentPage
     }
     private async void SaveButton_Clicked(object sender, EventArgs e)
     {
+        string shortFilm;
+        if (e5.IsChecked)
+            shortFilm = "Si";
+        else
+            shortFilm = "No";
+
+        string text = "Titulo: " + e1.Text + "\nAño: " + e3.Text + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
+            + "\nRecaudacion: " + e6.Text + "\nDistribuidor: " + e7.Text + "\nGenero: " + e8.Items[e8.SelectedIndex]
+            +"\nClasificacion: "+ e9.Items[e9.SelectedIndex]+"\nSinopsis: "+e10.Text;
         if (BindingContext is Models.Movie movie)
-            File.WriteAllText(movie.Filename, e1.Text);
+            File.WriteAllText(movie.Filename, text);
         /*File.WriteAllText(movie.Filename, e2.Text);
         File.WriteAllText(movie.Filename, e3.Text);
         File.WriteAllText(movie.Filename, e4.Text);
         File.WriteAllText(movie.Filename, e5.Text);
         File.WriteAllText(movie.Filename, e6.Text);
         File.WriteAllText(movie.Filename, e7.Text);
-        File.WriteAllText(movie.Filename, e8.Text);
+        File.WriteAllText(movie.Filename, e5Genero.Items[e5Genero.SelectedIndex]);
         File.WriteAllText(movie.Filename, e9.Text);
         File.WriteAllText(movie.Filename, e10.Text);*/
         await Shell.Current.GoToAsync("..");
@@ -50,7 +59,7 @@ public partial class MoviePage : ContentPage
         if (File.Exists(fileName))
         {
             movieModel.title = File.ReadAllText(fileName);
-            movieModel.time = DateTime.Parse(File.ReadAllText(fileName));
+            //movieModel.time = DateTime.Parse(File.ReadAllText(fileName));
             movieModel.year = int.Parse(File.ReadAllText(fileName));
             movieModel.director = File.ReadAllText(fileName);
             movieModel.shortFilm = Convert.ToBoolean(File.ReadAllText(fileName));

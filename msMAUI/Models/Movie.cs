@@ -12,7 +12,7 @@ namespace msMAUI.Models
         public string Filename { get; set; }
         public string title { get; set; }
 
-        public DateTime time { get; set; }
+        //public DateTime time { get; set; }
 
         public int year { get; set; }
 

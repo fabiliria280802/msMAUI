@@ -31,7 +31,7 @@ namespace msMAUI.Models
                                         {
                                             Filename = filename,
                                             title = File.ReadAllText(filename),
-                                            time = DateTime.Parse(File.ReadAllText(filename)),
+                                            //time = DateTime.Parse(File.ReadAllText(filename)),
                                             year = int.Parse((File.ReadAllText(filename))),
                                             director = File.ReadAllText(filename),
                                             shortFilm = Convert.ToBoolean(File.ReadAllText(filename)),
