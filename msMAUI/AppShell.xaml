@@ -7,27 +7,26 @@
     Shell.FlyoutBehavior="Disabled">
     <TabBar>
         <ShellContent
+<<<<<<< Updated upstream
             Title="Home"
+=======
+            Title="Inicio"
+>>>>>>> Stashed changes
             ContentTemplate="{DataTemplate views:MainPage}"
             Icon="homepage"/>
 
         <ShellContent
-            Title="Users"
-            ContentTemplate="{DataTemplate views:LoginPage}"
-            Icon="user"/>
-
-        <ShellContent
-            Title="Movie"
+            Title="Nuevo"
             ContentTemplate="{DataTemplate views:MoviePage}"
             Icon="play"/>
 
         <ShellContent
-            Title="All movies"
+            Title="Biblioteca"
             ContentTemplate="{DataTemplate views:AllMoviesPage}"
             Icon="moviereel"/>
 
         <ShellContent
-            Title="About"
+            Title="Nosotros"
             ContentTemplate="{DataTemplate views:AboutPage}"
             Icon="infobutton" />
     </TabBar>
