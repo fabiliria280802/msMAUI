@@ -56,6 +56,7 @@
 		<None Remove="Resources\corncito.png" />
 
 
+		<None Remove="Resources\Images\corncito.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -99,5 +100,10 @@
 	<ItemGroup>
 	  <BundleResource Include="Resources\moviestarneo.png" />
 	  <BundleResource Include="Resources\corncito.png" />
+	  <BundleResource Include="Resources\Images\corncito.png" />
+	  <BundleResource Include="Resources\Images\homepage.png" />
+	  <BundleResource Include="Resources\Images\infobutton.png" />
+	  <BundleResource Include="Resources\Images\moviereel.png" />
+	  <BundleResource Include="Resources\Images\play.png" />
 	</ItemGroup>
 </Project>

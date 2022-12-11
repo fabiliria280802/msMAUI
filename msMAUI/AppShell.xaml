@@ -7,27 +7,22 @@
     Shell.FlyoutBehavior="Disabled">
     <TabBar>
         <ShellContent
-            Title="Menú Principal"
+            Title="Inicio"
             ContentTemplate="{DataTemplate views:MainPage}"
             Icon="homepage"/>
 
         <ShellContent
-            Title="Users"
+            Title="Nuevo"
             ContentTemplate="{DataTemplate views:LoginPage}"
             Icon="user"/>
 
         <ShellContent
-            Title="Movie"
+            Title="Biblioteca"
             ContentTemplate="{DataTemplate views:MoviePage}"
             Icon="play"/>
 
         <ShellContent
-            Title="All movies"
-            ContentTemplate="{DataTemplate views:AllMoviesPage}"
-            Icon="moviereel"/>
-
-        <ShellContent
-            Title="About"
+            Title="Nosotros"
             ContentTemplate="{DataTemplate views:AboutPage}"
             Icon="infobutton" />
     </TabBar>
