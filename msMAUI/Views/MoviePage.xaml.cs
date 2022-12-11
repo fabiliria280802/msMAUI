@@ -19,6 +19,8 @@ public partial class MoviePage : ContentPage
     private async void SaveButton_Clicked(object sender, EventArgs e)
     {
         int num = int.Parse(e3.Text);
+        decimal num2 = decimal.Parse(e6.Text);
+        string recaudacion;
         string anio;
         string shortFilm;
         if (e5.IsChecked)
@@ -34,9 +36,22 @@ public partial class MoviePage : ContentPage
             else
             {
                 anio = "";
-                DisplayAlert("Alerta:", "No habia peliculas antes de 1989 o no puedes ingresar una pelicula despues del 2022", "OK");
+                await DisplayAlert("Alerta:", "No habia peliculas antes de 1989 o no puedes ingresar una pelicula despues del 2022.", "OK");
             }
         } while (num.Equals(""));
+
+        do
+        {
+            if (num2 > 0)
+            {
+                recaudacion = e6.Text;
+            }
+            else
+            {
+                recaudacion = "";
+                await DisplayAlert("Alerta:", "No puede ingresar valores menores a 0.", "OK");
+            }
+        } while (recaudacion.Equals(""));
 
         string text = "Titulo: " + e1.Text + "\nAño: " + anio + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
             + "\nRecaudacion: " + e6.Text + "\nDistribuidor: " + e7.Text + "\nGenero: " + e8.Items[e8.SelectedIndex]
