@@ -15,7 +15,15 @@ public partial class AllMoviesPage : ContentPage
 
     private async void Add_Clicked(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync(nameof(MoviePage));
+        try
+        {
+            //await Shell.Current.GoToAsync(nameof(MoviePage));
+            //await Shell.Current.GoToAsync(nameof(MoviePage));
+        }
+        catch (ArgumentException ae)
+        {
+            await DisplayAlert("No vale", "KK", "Ok");
+        }
     }
 
     private async void moviesCollection_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -34,9 +42,13 @@ public partial class AllMoviesPage : ContentPage
                 moviesCollection.SelectedItem = null;
             }
         }
+        catch (ArgumentException ae)
+        {
+            await DisplayAlert("No vale", "KK", "Ok");
+        }
         catch (System.Reflection.TargetInvocationException xe)
         {
-            DisplayAlert("Alerta: ", "No entra en allpages", "OK");
+            await DisplayAlert("Alerta: ", "No entra en allpages", "OK");
         }
     }
 }
