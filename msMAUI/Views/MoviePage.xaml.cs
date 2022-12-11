@@ -31,9 +31,10 @@ public partial class MoviePage : ContentPage
         }
         else
         {
+            anio = "";
             DisplayAlert("Alerta:", "No habia peliculas antes de 1989 o no puedes ingresar una pelicula despues del 2022", "OK");
         }
-        string text = "Titulo: " + e1.Text + "\nAño: " + e3.Text + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
+        string text = "Titulo: " + e1.Text + "\nAño: " + anio + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
             + "\nRecaudacion: " + e6.Text + "\nDistribuidor: " + e7.Text + "\nGenero: " + e8.Items[e8.SelectedIndex]
             + "\nClasificacion: " + e9.Items[e9.SelectedIndex] + "\nSinopsis: " + e10.Text;
         if (BindingContext is Models.Movie movie)
