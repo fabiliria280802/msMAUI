@@ -17,7 +17,7 @@ namespace msMAUI.Models
 
         public DateTime time { get; set; }
 
-        public int year { get; set; }
+        /*public int year { get; set; }
 
         public string director { get; set; }
 
@@ -27,6 +27,6 @@ namespace msMAUI.Models
         public string distributor { get; set; }
         public string gender { get; set; }
         public string classification { get; set; }
-        public string synopsis { get; set; }
+        public string synopsis { get; set; }*/
     }
 }
