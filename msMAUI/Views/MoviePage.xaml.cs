@@ -18,48 +18,71 @@ public partial class MoviePage : ContentPage
 
     private async void SaveButton_Clicked(object sender, EventArgs e)
     {
-        int num = int.Parse(e3.Text);
-        decimal num2 = decimal.Parse(e6.Text);
-        string recaudacion;
-        string anio;
-        string shortFilm;
-        if (e5.IsChecked)
-            shortFilm = "Si";
-        else
-            shortFilm = "No";
-        do
+        try
         {
-            if (num > 1989 && num <= 2022)
-            {
-                anio = e3.Text;
-            }
+            int num = int.Parse(e3.Text);
+            decimal num2 = decimal.Parse(e6.Text);
+            string recaudacion;
+            string anio;
+            int aux;
+            string shortFilm;
+            if (e5.IsChecked)
+                shortFilm = "Si";
             else
+                shortFilm = "No";
+            do
             {
-                anio = "";
-                await DisplayAlert("Alerta:", "No habia peliculas antes de 1989 o no puedes ingresar una pelicula despues del 2022.", "OK");
-            }
-        } while (num.Equals(""));
+                if (num > 1989 && num <= 2022)
+                {
+                    anio = e3.Text;
+                }
+                else
+                {
+                    anio = "";
+                    await DisplayAlert("Alerta:", "No habia peliculas antes de 1989 o no puedes ingresar una pelicula despues del 2022.", "OK");
+                }
+            } while (num.Equals(""));
 
-        do
-        {
-            if (num2 > 0)
+            do
             {
-                recaudacion = e6.Text;
-            }
-            else
-            {
-                recaudacion = "";
-                await DisplayAlert("Alerta:", "No puede ingresar valores menores a 0.", "OK");
-            }
-        } while (recaudacion.Equals(""));
+                if (num2 > 0)
+                {
+                    recaudacion = e6.Text;
+                }
+                else
+                {
+                    recaudacion = "";
+                    await DisplayAlert("Alerta:", "No puede ingresar valores menores a 0.", "OK");
+                }
+            } while (recaudacion.Equals(""));
 
-        string text = "Titulo: " + e1.Text + "\nAño: " + anio + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
+            aux = 1;
+            string text = "Titulo: " + e1.Text + "\nAño: " + anio + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
             + "\nRecaudacion: " + e6.Text + "\nDistribuidor: " + e7.Text + "\nGenero: " + e8.Items[e8.SelectedIndex]
             + "\nClasificacion: " + e9.Items[e9.SelectedIndex] + "\nSinopsis: " + e10.Text;
-        if (BindingContext is Models.Movie movie)
-            File.WriteAllText(movie.Filename, text);
-        //DisplayAlert("Alerta:", "Se guardo un archivo llamado" + e1.Text, "Ok");
-        await Shell.Current.GoToAsync("..");
+            if (BindingContext is Models.Movie movie)
+                File.WriteAllText(movie.Filename, text);
+            await DisplayAlert("Alerta:", "Se guardo correctamente la película llamada " + e1.Text, "Ok");
+            await Shell.Current.GoToAsync("..");
+        }
+        catch (ArgumentNullException nre)
+        {
+            await DisplayAlert("Alerta:", "Debe llenar todos los campos.", "Ok");
+        }
+        /*do
+        {
+            if (e1.Text.Equals(null) && e4.Text.Equals(null) && e7.Text.Equals(null) && e8.Items[e8.SelectedIndex].Equals(null) && e9.Items[e9.SelectedIndex].Equals(null) && e10.Text.Equals(null))
+            {
+                aux = 0;
+                await DisplayAlert("Alerta:", "Debe llenar todos los campos.", "Ok");
+            }
+            else
+            {
+                
+            }
+        } while (aux == 0);*/
+
+
     }
 
     private async void DeleteButton_Clicked(object sender, EventArgs e)
@@ -82,14 +105,14 @@ public partial class MoviePage : ContentPage
         {
             movieModel.title = File.ReadAllText(fileName);
             //movieModel.time = DateTime.Parse(File.ReadAllText(fileName));
-            movieModel.year = File.ReadAllText(fileName);
+            /*movieModel.year = File.ReadAllText(fileName);
             movieModel.director = File.ReadAllText(fileName);
             movieModel.shortFilm = File.ReadAllText(fileName);
             movieModel.income = File.ReadAllText(fileName);
             movieModel.distributor = File.ReadAllText(fileName);
             movieModel.gender = File.ReadAllText(fileName);
             movieModel.classification = File.ReadAllText(fileName);
-            movieModel.synopsis = File.ReadAllText(fileName);
+            movieModel.synopsis = File.ReadAllText(fileName);*/
         }
 
         BindingContext = movieModel;
