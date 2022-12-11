@@ -1,3 +1,5 @@
+using Android.Media.TV;
+
 namespace msMAUI.Views;
 
 public partial class AllMoviesPage : ContentPage
@@ -18,12 +20,11 @@ public partial class AllMoviesPage : ContentPage
         try
         {
 
-            Shell.Current.GoToAsync(nameof(MoviePage));
-            //await Shell.Current.GoToAsync(nameof(MoviePage));
+            await Navigation.PushAsync(new MoviePage());
         }
         catch (ArgumentException ae)
         {
-            await DisplayAlert("No vale", "KK", "Ok");
+            await DisplayAlert("Alerta", "Todo mal", "Ok");
         }
     }
 
