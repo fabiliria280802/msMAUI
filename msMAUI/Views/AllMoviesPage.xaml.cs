@@ -2,7 +2,7 @@ namespace msMAUI.Views;
 
 public partial class AllMoviesPage : ContentPage
 {
-    public AllMoviesPage()
+    /*public AllMoviesPage()
     {
         InitializeComponent();
         BindingContext = new Models.AllMovies();
@@ -31,5 +31,5 @@ public partial class AllMoviesPage : ContentPage
             // Unselect the UI
             moviesCollection.SelectedItem = null;
         }
-    }
+    }*/
 }

@@ -9,7 +9,7 @@ namespace msMAUI.Models
 {
     internal class AllMovies
     {
-        public ObservableCollection<Movie> Movies { get; set; } = new ObservableCollection<Movie>();
+        /*public ObservableCollection<Movie> Movies { get; set; } = new ObservableCollection<Movie>();
         public AllMovies() =>
             LoadMovies();
 
@@ -31,7 +31,7 @@ namespace msMAUI.Models
                                         {
                                             Filename = filename,
                                             title = File.ReadAllText(filename),
-                                            time = DateTime.Parse(File.ReadAllText(filename)),
+                                            //time = DateTime.Parse(File.ReadAllText(filename)),
                                             year = int.Parse((File.ReadAllText(filename))),
                                             director = File.ReadAllText(filename),
                                             shortFilm = Convert.ToBoolean(File.ReadAllText(filename)),
@@ -43,11 +43,11 @@ namespace msMAUI.Models
                                         })
 
                                         // With the final collection of notes, order them by date
-                                        .OrderBy(movie => movie.year);
+                                        .OrderBy(movie => movie.title);
 
             // Add each note into the ObservableCollection
             foreach (Movie movie in movies)
                 Movies.Add(movie);
-        }
+        }*/
     }
 }
