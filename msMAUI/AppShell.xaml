@@ -14,7 +14,7 @@
         <ShellContent
             Title="Nuevo"
             ContentTemplate="{DataTemplate views:MoviePage}"
-            Icon="user"/>
+            Icon="moviereel"/>
 
         <ShellContent
             Title="Biblioteca"
