@@ -13,7 +13,7 @@
 
         <ShellContent
             Title="Users"
-            ContentTemplate="{DataTemplate views:UsersPage}"
+            ContentTemplate="{DataTemplate views:LoginPage}"
             Icon="user"/>
 
         <ShellContent
