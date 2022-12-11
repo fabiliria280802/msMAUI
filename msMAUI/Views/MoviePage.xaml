@@ -38,7 +38,7 @@
                     TextColor="BlueViolet"/>
             <Grid ColumnDefinitions="*,*" ColumnSpacing="4" Margin="10,5,10,10" HorizontalOptions="Center" VerticalOptions="Center">
                 <Label Text="Mover el switch si es un cortometraje:" VerticalOptions="Center"/>
-                <CheckBox x:Name="e5" Grid.Row="1">
+                <CheckBox x:Name="e5" Grid.Row="">
 
                 </CheckBox>
             </Grid>
