@@ -7,11 +7,7 @@
     Shell.FlyoutBehavior="Disabled">
     <TabBar>
         <ShellContent
-<<<<<<< Updated upstream
-            Title="Home"
-=======
             Title="Inicio"
->>>>>>> Stashed changes
             ContentTemplate="{DataTemplate views:MainPage}"
             Icon="homepage"/>
 

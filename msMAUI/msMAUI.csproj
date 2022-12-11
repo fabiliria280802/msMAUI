@@ -53,13 +53,8 @@
 		<None Remove="Resources\Splash\maxmovie.png" />
 		<None Remove="Resources\AppIcon\appicon.png" />
 		<None Remove="Resources\moviestarneo.png" />
-<<<<<<< Updated upstream
-=======
-		<None Remove="Resources\corncito.png" />
-
-
+                <None Remove="Resources\corncito.png" />
 		<None Remove="Resources\Images\corncito.png" />
->>>>>>> Stashed changes
 	</ItemGroup>
 
 	<ItemGroup>
@@ -98,14 +93,11 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\moviestarneo.png" />
-<<<<<<< Updated upstream
-=======
 	  <BundleResource Include="Resources\corncito.png" />
 	  <BundleResource Include="Resources\Images\corncito.png" />
 	  <BundleResource Include="Resources\Images\homepage.png" />
 	  <BundleResource Include="Resources\Images\infobutton.png" />
 	  <BundleResource Include="Resources\Images\moviereel.png" />
 	  <BundleResource Include="Resources\Images\play.png" />
->>>>>>> Stashed changes
 	</ItemGroup>
 </Project>
