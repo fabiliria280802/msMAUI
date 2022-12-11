@@ -37,14 +37,20 @@
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
                 HorizontalOptions="Start" />
-
+            <!--
             <Button
                 x:Name="CounterBtn"
                 Text="Matrix"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
-
+            -->
+            <Button
+                x:Name="NextPage"
+                Text="Sign in"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="NextPage_Clicked"
+                HorizontalOptions="Center" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

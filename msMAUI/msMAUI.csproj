@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
@@ -52,11 +52,10 @@
 		<None Remove="Resources\Splash\" />
 		<None Remove="Resources\Splash\maxmovie.png" />
 		<None Remove="Resources\AppIcon\appicon.png" />
-<<<<<<< Updated upstream
-=======
 		<None Remove="Resources\moviestarneo.png" />
 		<None Remove="Resources\corncito.png" />
->>>>>>> Stashed changes
+
+
 	</ItemGroup>
 
 	<ItemGroup>
@@ -71,6 +70,9 @@
 		</MauiXaml>
 		<MauiXaml Update="Views\AllMoviesPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\LoginPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Views\UsersPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
@@ -91,14 +93,11 @@
 	  <MauiIcon Include="Resources\AppIcon\appicon.png" />
 	</ItemGroup>
 	<ItemGroup>
-<<<<<<< Updated upstream
 	  <MauiSplashScreen Include="Resources\Splash\maxmovie.png" />
-=======
 	  <MauiSplashScreen Include="Resources\Splash\maxmovie.png" Color="White" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\moviestarneo.png" />
 	  <BundleResource Include="Resources\corncito.png" />
->>>>>>> Stashed changes
 	</ItemGroup>
 </Project>

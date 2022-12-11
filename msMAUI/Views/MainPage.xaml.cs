@@ -7,9 +7,10 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
+        //NextPage_Clicked += NextPage_Clicked;
     }
 
-    private void OnCounterClicked(object sender, EventArgs e)
+    /*private void OnCounterClicked(object sender, EventArgs e)
     {
         count++;
 
@@ -19,6 +20,11 @@ public partial class MainPage : ContentPage
             CounterBtn.Text = $"Clicked {count} times";
 
         SemanticScreenReader.Announce(CounterBtn.Text);
+    }*/
+
+    private void NextPage_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new LoginPage());
     }
 
     /*Image image = new Image
