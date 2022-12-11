@@ -39,11 +39,11 @@ namespace msMAUI.Models
                                             distributor = File.ReadAllText(filename),
                                             gender = File.ReadAllText(filename),
                                             classification = File.ReadAllText(filename),
-                                            synopsis = File.ReadAllText(filename)
+                                            synopsis = File.ReadAllText(filename)*/
                                         })
 
                                         // With the final collection of notes, order them by date
-                                        .OrderBy(movie => movie.year);
+                                        .OrderBy(movie => movie.title);
 
             // Add each note into the ObservableCollection
             foreach (Movie movie in movies)

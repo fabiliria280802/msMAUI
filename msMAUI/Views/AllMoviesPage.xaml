@@ -33,6 +33,7 @@
                     <Label Text="{Binding gender}" FontSize="14" TextColor="Silver"/>
                     <Label Text="{Binding classification}" FontSize="14" TextColor="Silver"/>
                     <Label Text="{Binding synopsis}" FontSize="14" TextColor="Silver"/>
+                    -->
                 </StackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>

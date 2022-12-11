@@ -58,7 +58,7 @@ public partial class MoviePage : ContentPage
             movieModel.distributor = File.ReadAllText(fileName);
             movieModel.gender = File.ReadAllText(fileName);
             movieModel.classification = File.ReadAllText(fileName);
-            movieModel.synopsis = File.ReadAllText(fileName);
+            movieModel.synopsis = File.ReadAllText(fileName);*/
         }
 
         BindingContext = movieModel;
