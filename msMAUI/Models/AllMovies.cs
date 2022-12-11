@@ -32,7 +32,7 @@ namespace msMAUI.Models
                                             Filename = filename,
                                             title = File.ReadAllText(filename),
                                             Date = File.GetCreationTime(filename),
-                                            time = File.ReadAllText(filename),
+                                            //time = File.ReadAllText(filename),
                                             year = File.ReadAllText(filename),
                                             director = File.ReadAllText(filename),
                                             shortFilm = File.ReadAllText(filename),

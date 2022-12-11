@@ -16,7 +16,7 @@ namespace msMAUI.Models
         public string title { get; set; }
         public DateTime Date { get; set; }
 
-        public string time { get; set; }*/
+        //public string time { get; set; }*/
 
         public string year { get; set; }
 

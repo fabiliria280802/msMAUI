@@ -19,9 +19,9 @@
             <Label Text="Ingresar duración de la película:" />
             <!--
             <TimePicker x:Name="e2"
-                        Time="{Binding Text}"
-                        Format="HH:mm"
-                        
+            Time="{Binding Text}"
+            Format="HH:mm"
+            TimeSpan = ""
             TextColor="BlueViolet"/>
             -->
             <Label Text="Ingresar año de la película:" />
