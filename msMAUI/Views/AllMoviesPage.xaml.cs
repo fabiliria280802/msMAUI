@@ -40,12 +40,17 @@ public partial class AllMoviesPage : ContentPage
                 //await Navigation.PushAsync(nameof(MoviePage.ItemId)=movie.Filename);
                 // Unselect the UI
                 moviesCollection.SelectedItem = null;
+                    //Shell.Current.GoToAsync($"{nameof(MoviePage)}?{nameof(MoviePage.ItemId)}={movie.Filename}");
             }
             else
             {
                 await DisplayAlert("Alerta: ", "No entra al if", "Ok");
-            
+
             }
+        }
+        catch (InvalidCastException ice)
+        {
+            await DisplayAlert("Alerta: ", "No pasa a MoviePage", "Ok");
         }
         catch (ArgumentException ae)
         {
