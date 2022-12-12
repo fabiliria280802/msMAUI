@@ -38,13 +38,15 @@ public partial class AllMoviesPage : ContentPage
 
                 // Should navigate to "NotePage?ItemId=path\on\device\XYZ.notes.txt"
                 await Shell.Current.GoToAsync($"{nameof(MoviePage)}?{nameof(MoviePage.ItemId)}={movie.Filename}");
-
+                //codigo que no funcionan
+                //await Navigation.PushAsync(nameof(MoviePage.ItemId)=movie.Filename);
                 // Unselect the UI
                 moviesCollection.SelectedItem = null;
             }
         }
         catch (ArgumentException ae)
         {
+
             await DisplayAlert("No vale", "KK", "Ok");
         }
         catch (System.Reflection.TargetInvocationException xe)
