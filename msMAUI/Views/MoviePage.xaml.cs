@@ -50,6 +50,8 @@ public partial class MoviePage : ContentPage
 
             do
             {
+                // try
+                // {
                 if (num2 > 0)
                 {
                     recaudacion = e6.Text;
@@ -59,8 +61,13 @@ public partial class MoviePage : ContentPage
                     recaudacion = "";
                     await DisplayAlert("Alerta:", "No puede ingresar valores menores a 0.", "OK");
                 }
+                //}
+                //catch (FormatException fe)
+                // {
+                //   recaudacion = "";
+                // await DisplayAlert("Alerta:", "No se pueden ingresar decimales.", "OK");
+                // }
             } while (recaudacion.Equals(""));
-
             /*do
             {
                 if (duraccion > 0)
@@ -75,14 +82,19 @@ public partial class MoviePage : ContentPage
             } while (recaudacion.Equals(""));*/
 
             //aux = 1;
-            string text = "Titulo: " + e1.Text + /*"Duración: " + e2.Time +*/ "\nAño: " + anio + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
+            string text = "------------------------------------------------\nTitulo: " + e1.Text + /*"Duración: " + e2.Time +*/ "\nAño: " + anio + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
             + "\nRecaudacion: " + e6.Text + "\nDistribuidor: " + e7.Text + "\nGenero: " + e8.Items[e8.SelectedIndex]
-            + "\nClasificacion: " + e9.Items[e9.SelectedIndex] + "\nSinopsis: " + e10.Text;
+            + "\nClasificacion: " + e9.Items[e9.SelectedIndex] + "\nSinopsis: " + e10.Text + "\n------------------------------------------------\n";
             if (BindingContext is Models.Movie movie)
                 File.WriteAllText(movie.Filename, text);
             await DisplayAlert("Alerta:", "Se guardo correctamente la película llamada " + e1.Text, "Ok");
             await Navigation.PushAsync(new AllMoviesPage());
             //await Shell.Current.GoToAsync("..");
+        }
+        catch (FormatException fe)
+        {
+            //   recaudacion = "";
+            await DisplayAlert("Alerta:", "No se pueden ingresar decimales en el año.", "OK");
         }
         catch (ArgumentNullException nre)
         {
