@@ -16,7 +16,7 @@
                 HorizontalOptions="Center" />
 
             <Label
-                Text="¡Hola, soy Corncito!"
+                Text="¡Hola! Soy Corncito"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 FontFamily="Arial"
@@ -29,7 +29,9 @@
                 FontSize="18"
                 HorizontalOptions="Center" />
 
-            <Entry Placeholder="¿Cómo te llamas?"
+            <Entry
+               x:Name="nombre"
+               Placeholder="¿Cómo te llamas?"
                Grid.Row="1"/>
 
             <Button Text="Empezar"
