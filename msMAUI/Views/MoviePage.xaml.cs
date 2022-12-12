@@ -80,14 +80,12 @@ public partial class MoviePage : ContentPage
             else
             {
                 anio = null;
-                string text = "------------------------------------------------\nTitulo: " + e1.Text + /*"Duración: " + e2.Time +*/ "\nAño: " + anio + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
-            + "\nRecaudacion: " + e6.Text + "\nDistribuidor: " + e7.Text + "\nGenero: " + e8.Items[e8.SelectedIndex]
-            + "\nClasificacion: " + e9.Items[e9.SelectedIndex] + "\nSinopsis: " + e10.Text + "\n------------------------------------------------";
-                if (BindingContext is Models.Movie movie)
-                    File.WriteAllText(movie.Filename, text);
-                await DisplayAlert("Alerta:", "Se guardo correctamente la película llamada " + e1.Text, "Ok");
-                await Navigation.PushAsync(new AllMoviesPage());
+
             }
+        }
+        catch (ArgumentOutOfRangeException aore)
+        {
+            await DisplayAlert("Alerta:", "Debe llenar todos los campos.", "Ok");
         }
         catch (FormatException fe)
         {
