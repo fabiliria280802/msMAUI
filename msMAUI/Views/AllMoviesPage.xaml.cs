@@ -41,6 +41,11 @@ public partial class AllMoviesPage : ContentPage
                 // Unselect the UI
                 moviesCollection.SelectedItem = null;
             }
+            else
+            {
+                await DisplayAlert("Alerta: ", "No entra al if", "Ok");
+            
+            }
         }
         catch (ArgumentException ae)
         {

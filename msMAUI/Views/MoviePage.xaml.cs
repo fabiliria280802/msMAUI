@@ -20,7 +20,7 @@ public partial class MoviePage : ContentPage
     {
         try
         {
-            int num = int.Parse(e3.Text);
+
             //DateTime. duraccion = e2.Time;
             //DateTime result1 = DateTime.Parse("00:40");
             //DateTime result2 = DateTime.Parse("06:00");
@@ -29,67 +29,65 @@ public partial class MoviePage : ContentPage
             decimal num2 = decimal.Parse(e6.Text);
             string recaudacion;
             string anio;
-            int aux;
+            int num = int.Parse(e3.Text);
             string shortFilm;
             if (e5.IsChecked)
                 shortFilm = "Si";
             else
                 shortFilm = "No";
-            do
+            //do
+            //{
+            num = int.Parse(e3.Text);
+            if (num > 1985 && num <= 2022)
             {
-                if (num > 1989 && num <= 2022)
-                {
-                    anio = e3.Text;
-                }
-                else
-                {
-                    anio = "";
-                    await DisplayAlert("Alerta:", "No habia peliculas antes de 1989 o no puedes ingresar una pelicula despues del 2022.", "OK");
-                }
-            } while (num.Equals(""));
+                anio = e3.Text;
+            }
+            else
+            {
+                anio = "";
+                await DisplayAlert("Alerta:", "No habia peliculas antes de 1985 o no puedes ingresar una pelicula despues del 2022.", "OK");
+                //num = int.Parse(e3.Text);
+            }
 
-            do
-            {
-                // try
-                // {
-                if (num2 > 0)
-                {
-                    recaudacion = e6.Text;
-                }
-                else
-                {
-                    recaudacion = "";
-                    await DisplayAlert("Alerta:", "No puede ingresar valores menores a 0.", "OK");
-                }
-                //}
-                //catch (FormatException fe)
-                // {
-                //   recaudacion = "";
-                // await DisplayAlert("Alerta:", "No se pueden ingresar decimales.", "OK");
-                // }
-            } while (recaudacion.Equals(""));
-            /*do
-            {
-                if (duraccion > 0)
-                {
-                    var duraccion = e2.Time;
-                }
-                else
-                {
-                    recaudacion = "";
-                    await DisplayAlert("Alerta:", "No puede ingresar un valor menor a 40min o mayor a 6horas y 30min.", "OK");
-                }
-            } while (recaudacion.Equals(""));*/
+            //} while (anio.Equals(""));
 
-            //aux = 1;
-            string text = "------------------------------------------------\nTitulo: " + e1.Text + /*"Duración: " + e2.Time +*/ "\nAño: " + anio + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
+            //do
+            //{
+            // try
+            // {
+            if (num2 > 0)
+            {
+                recaudacion = e6.Text;
+            }
+            else
+            {
+                recaudacion = null;
+
+                //await DisplayAlert("Alerta:", "No puede ingresar valores menores a 0.", "OK");
+            }
+
+            if (!anio.Equals(""))
+            {
+                string text = "------------------------------------------------\nTitulo: " + e1.Text + /*"Duración: " + e2.Time +*/ "\nAño: " + anio + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
             + "\nRecaudacion: " + e6.Text + "\nDistribuidor: " + e7.Text + "\nGenero: " + e8.Items[e8.SelectedIndex]
             + "\nClasificacion: " + e9.Items[e9.SelectedIndex] + "\nSinopsis: " + e10.Text + "\n------------------------------------------------";
-            if (BindingContext is Models.Movie movie)
-                File.WriteAllText(movie.Filename, text);
-            await DisplayAlert("Alerta:", "Se guardo correctamente la película llamada " + e1.Text, "Ok");
-            await Navigation.PushAsync(new AllMoviesPage());
-            //await Shell.Current.GoToAsync("..");
+                if (BindingContext is Models.Movie movie)
+                    File.WriteAllText(movie.Filename, text);
+                await DisplayAlert("Alerta:", "Se guardo correctamente la película llamada " + e1.Text, "Ok");
+                await Navigation.PushAsync(new AllMoviesPage());
+                //await Shell.Current.GoToAsync("..");
+            }
+            else
+            {
+                anio = null;
+                string text = "------------------------------------------------\nTitulo: " + e1.Text + /*"Duración: " + e2.Time +*/ "\nAño: " + anio + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
+            + "\nRecaudacion: " + e6.Text + "\nDistribuidor: " + e7.Text + "\nGenero: " + e8.Items[e8.SelectedIndex]
+            + "\nClasificacion: " + e9.Items[e9.SelectedIndex] + "\nSinopsis: " + e10.Text + "\n------------------------------------------------";
+                if (BindingContext is Models.Movie movie)
+                    File.WriteAllText(movie.Filename, text);
+                await DisplayAlert("Alerta:", "Se guardo correctamente la película llamada " + e1.Text, "Ok");
+                await Navigation.PushAsync(new AllMoviesPage());
+            }
         }
         catch (FormatException fe)
         {
