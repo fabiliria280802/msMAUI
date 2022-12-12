@@ -57,6 +57,8 @@
 
 
 		<None Remove="Resources\Images\corncito.png" />
+		<None Remove="Resources\Images\cornparty.png" />
+		<None Remove="Resources\cornparty.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -105,5 +107,11 @@
 	  <BundleResource Include="Resources\Images\infobutton.png" />
 	  <BundleResource Include="Resources\Images\moviereel.png" />
 	  <BundleResource Include="Resources\Images\play.png" />
+	  <BundleResource Include="Resources\Images\cornparty.png" />
+	  <BundleResource Include="Resources\Images\cornparty.png" />
+	  <BundleResource Include="Resources\cornparty.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\cornparty.png" />
 	</ItemGroup>
 </Project>

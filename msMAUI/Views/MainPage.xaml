@@ -11,23 +11,23 @@
             Padding="30,0"
             VerticalOptions="Center">
             <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                Source="cornparty"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Bienvenido a la Matrix!"
+                Text="¡Qué más, Mateo!"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
+                FontFamily="Arial"
                 HorizontalOptions="Center" />
 
             <Label
-                Text="¿Alguna vez has tenido un sueño, Neo, del que estabas tan seguro de que era real? ¿Qué pasaría si no pudieras despertar de ese sueño? ¿Cómo sabrías la diferencia entre el mundo de los sueños y el mundo real?"
-                TextColor="Green"
+                Text=""
+                FontFamily="Arial"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
+                FontSize="25"
                 HorizontalOptions="Center" />
 
             <Label
