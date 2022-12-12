@@ -84,7 +84,7 @@ public partial class MoviePage : ContentPage
             //aux = 1;
             string text = "------------------------------------------------\nTitulo: " + e1.Text + /*"Duración: " + e2.Time +*/ "\nAño: " + anio + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
             + "\nRecaudacion: " + e6.Text + "\nDistribuidor: " + e7.Text + "\nGenero: " + e8.Items[e8.SelectedIndex]
-            + "\nClasificacion: " + e9.Items[e9.SelectedIndex] + "\nSinopsis: " + e10.Text + "\n------------------------------------------------\n";
+            + "\nClasificacion: " + e9.Items[e9.SelectedIndex] + "\nSinopsis: " + e10.Text + "\n------------------------------------------------";
             if (BindingContext is Models.Movie movie)
                 File.WriteAllText(movie.Filename, text);
             await DisplayAlert("Alerta:", "Se guardo correctamente la película llamada " + e1.Text, "Ok");
