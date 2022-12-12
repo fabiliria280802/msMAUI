@@ -4,19 +4,19 @@
              x:Class="msMAUI.Views.MainPage"
              Title="Menú principal">
 
-    <!-- BackgroundColor="Green" -->
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
+
             <Image
                 Source="cornparty.png"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
 
             <Label
-                Text="¡Qué más, Mateo!"
+                Text="¡Buenos días!"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="38"
                 FontFamily="Arial"

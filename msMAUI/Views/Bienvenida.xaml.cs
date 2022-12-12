@@ -1,4 +1,6 @@
-﻿namespace msMAUI.Views;
+﻿using Microsoft.Maui.ApplicationModel.Communication;
+
+namespace msMAUI.Views;
 
 public partial class Bienvenida : ContentPage
 {
@@ -11,5 +13,6 @@ public partial class Bienvenida : ContentPage
     {
         Navigation.PushAsync(new AppShell());
         Application.Current.MainPage = new AppShell();
+        App.Current.MainPage.DisplayAlert("¡Bienvenido de nuevo!", nombre.Text, "Continuar");
     }
 }
