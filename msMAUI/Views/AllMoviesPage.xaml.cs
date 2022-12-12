@@ -45,7 +45,7 @@ public partial class AllMoviesPage : ContentPage
         catch (ArgumentException ae)
         {
 
-            await DisplayAlert("No vale", "KK", "Ok");
+            await DisplayAlert("Alerta: ", "No pasa a MoviePage", "Ok");
         }
         catch (System.Reflection.TargetInvocationException xe)
         {
