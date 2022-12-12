@@ -43,11 +43,6 @@ public partial class AllMoviesPage : ContentPage
                 moviesCollection.SelectedItem = null;
                 //Shell.Current.GoToAsync($"{nameof(MoviePage)}?{nameof(MoviePage.ItemId)}={movie.Filename}");
             }
-            /*else
-            {
-                await DisplayAlert("Alerta: ", "No entra al if", "Ok");
-
-            }*/
         }
         catch (InvalidCastException ice)
         {

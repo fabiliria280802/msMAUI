@@ -4,63 +4,111 @@
              x:Class="msMAUI.Views.MoviePage"
              Title="Nueva película">
     <ScrollView>
-        <StackLayout>
-            <Label Text="Cuéntanos más sobre tu peli."
+        <StackLayout Margin="30,30,30,30">
+            <Label Text="Ingresa los detalles de la peli"
                    HorizontalOptions="Center"
                    FontSize="25"
+                   FontFamily="Arial"
                    TextColor="BlueViolet"/>
-            <Label Text="Nombre de la película:" />
-            <Editor x:Name="e1"
+            <Label Text=" "
+                   HorizontalOptions="Center"
+                   FontSize="25"
+                   FontFamily="Arial"
+                   TextColor="BlueViolet"/>
+            <Label Text="Nombre de la película: "
+                   HorizontalOptions="Center"/>
+            <Entry x:Name="e1"
                     MaxLength="50"
-                    Placeholder="Ingresar texto"
-                    PlaceholderColor="BlueViolet"
+                    Placeholder="Ejemplo: Top Gun"
+                    PlaceholderColor="Gray"
                     Text="{Binding Text}"
-                    TextColor="BlueViolet"/>
+                    TextColor="Black"/>
 
-            <Label Text="Ingresar año de la película:" />
-            <Editor x:Name="e3"
+            <Label Text=" "
+                   HorizontalOptions="Center"
+                   FontSize="25"
+                   FontFamily="Arial"
+                   TextColor="BlueViolet"/>
+
+            <Label Text="Año de la película: " HorizontalOptions="Center"/>
+            <Entry x:Name="e3"
                     MaxLength="4"
-                    PlaceholderColor="BlueViolet"
-                    Placeholder="Ingresar texto"
+                    PlaceholderColor="Gray"
+                    Placeholder="Ejemplo: 2002"
                     Keyboard="Numeric"
                     Text="{Binding Text}"
-                    TextColor="BlueViolet"/>
-            <Label Text="Ingresar director de la película:" />
-            <Editor x:Name="e4"
+                    TextColor="Black"/>
+
+            <Label Text=" "
+                   HorizontalOptions="Center"
+                   FontSize="25"
+                   FontFamily="Arial"
+                   TextColor="BlueViolet"/>
+            <Label Text="Director de la película:"
+                   HorizontalOptions="Center"/>
+
+            <Entry x:Name="e4"
                     MaxLength="50"
-                    PlaceholderColor="BlueViolet"
-                    Placeholder="Ingresar texto"
+                    PlaceholderColor="Gray"
+                    Placeholder="Ejemplo: Tim Burton"
                     Text="{Binding Text}"
-                    TextColor="BlueViolet"/>
+                    TextColor="Black"/>
+
+            <Label Text=" "
+                   HorizontalOptions="Center"
+                   FontSize="25"
+                   FontFamily="Arial"
+                   TextColor="BlueViolet"/>
+
             <Grid ColumnDefinitions="*,*" ColumnSpacing="4" Margin="10,0,10,10" HorizontalOptions="Center" VerticalOptions="Center">
-                <Label Text="Dar Click al cuadrado si es un cortometraje:" VerticalOptions="Center"/>
+                <Label Text="¿Es un cortometraje? ( Marcar para sí )" VerticalOptions="Center"/>
                 <CheckBox x:Name="e5" Grid.Column="1" Color="BlueViolet">
 
                 </CheckBox>
             </Grid>
-            <Label Text="Ingresar la recaudación de la película:" />
-            <Editor x:Name="e6"
+
+            <Label Text=" "
+                   HorizontalOptions="Center"
+                   FontSize="25"
+                   FontFamily="Arial"
+                   TextColor="BlueViolet"/>
+
+            <Label Text="Recaudación de la película: "
+                   HorizontalOptions="Center"/>
+            <Entry x:Name="e6"
                     MaxLength="30"
                     Keyboard="Numeric"
-                    PlaceholderColor="BlueViolet"
-                    Placeholder="Ingresar texto"
+                    PlaceholderColor="Gray"
+                    Placeholder="Ejemplo: 1000000"
                     Text="{Binding Text}"
-                    TextColor="BlueViolet"/>
-            <Label Text="Ingresar el nombre del distribuidor de la película:" />
-            <Editor x:Name="e7"
+                    TextColor="Black"/>
+            <Label Text=" "
+                   HorizontalOptions="Center"
+                   FontSize="25"
+                   FontFamily="Arial"
+                   TextColor="BlueViolet"/>
+            <Label Text="Distribuidor de la película: "
+                   HorizontalOptions="Center"/>
+            <Entry x:Name="e7"
                     MaxLength="30"
-                    PlaceholderColor="BlueViolet"
-                    Placeholder="Ingresar texto"
+                    PlaceholderColor="Gray"
+                    Placeholder="Ejemplo: Universal Pictures"
                     Text="{Binding Text}"
-                    TextColor="BlueViolet"/>
-            <Label Text="Escoge el genero de la película:" />
+                    TextColor="Black"/>
+            <Label Text=" "
+                   HorizontalOptions="Center"
+                   FontSize="25"
+                   FontFamily="Arial"
+                   TextColor="BlueViolet"/>
+            <Label Text="Género de la película: "
+                   HorizontalOptions="Center"/>
             <Picker x:Name="e8"
                     Title="Seleccionar"
                     TitleColor="Violet"
                     ItemDisplayBinding="{Binding Text}"
                     TextColor="BlueViolet"
                     VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="StartAndExpand"
+                    HorizontalOptions="CenterAndExpand"
                     Margin="10,0,10,10"
                     SelectedIndexChanged="e8_SelectedIndexChanged"
                     >
@@ -74,7 +122,13 @@
                     <x:String>Comedia</x:String>
                 </Picker.Items>
             </Picker>
-            <Label Text="Escoge la clasificación de la película:"/>
+            <Label Text=" "
+                   HorizontalOptions="Center"
+                   FontSize="25"
+                   FontFamily="Arial"
+                   TextColor="BlueViolet"/>
+            <Label Text="Clasificación de la película: "
+                   HorizontalOptions="Center"/>
             <Picker
                 x:Name="e9"
                 Title="Seleccione"
@@ -82,7 +136,7 @@
                 ItemDisplayBinding="{Binding Text}"
                 TextColor="BlueViolet"
                 VerticalOptions="CenterAndExpand"
-                HorizontalOptions="StartAndExpand"
+                HorizontalOptions="CenterAndExpand"
                 Margin="10,0,10,10"
                 SelectedIndexChanged="e9_SelectedIndexChanged">
                 <Picker.Items>
@@ -91,14 +145,25 @@
                     <x:String>18+</x:String>
                 </Picker.Items>
             </Picker>
-            <Label Text="Ingresar la sinopsis de la película:" />
-            <Editor x:Name="e10"
+            <Label Text=" "
+                   HorizontalOptions="Center"
+                   FontSize="25"
+                   FontFamily="Arial"
+                   TextColor="BlueViolet"/>
+            <Label Text="Sinopsis de la película: "
+                   HorizontalOptions="Center"/>
+            <Entry x:Name="e10"
                     MaxLength="50"
-                    PlaceholderColor="BlueViolet"
-                    Placeholder="Ingresar texto"
+                    PlaceholderColor="Gray"
+                    Placeholder="Ejemplo: El ganador del año se convierte en el Top Gun."
                     Text="{Binding Text}"
                     TextColor="BlueViolet"
                     />
+            <Label Text=" "
+                   HorizontalOptions="Center"
+                   FontSize="25"
+                   FontFamily="Arial"
+                   TextColor="BlueViolet"/>
 
             <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
                 <Button Text="Save"

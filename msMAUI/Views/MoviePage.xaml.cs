@@ -45,7 +45,7 @@ public partial class MoviePage : ContentPage
             else
             {
                 anio = "";
-                await DisplayAlert("Alerta:", "No habia peliculas antes de 1985 o no puedes ingresar una pelicula despues del 2022.", "OK");
+                await DisplayAlert("Alerta:", "No había peliculas antes de 1985 o no puedes ingresar una película después del 2022.", "OK");
                 //num = int.Parse(e3.Text);
             }
 
@@ -68,12 +68,12 @@ public partial class MoviePage : ContentPage
 
             if (!anio.Equals(""))
             {
-                string text = "------------------------------------------------\nTitulo: " + e1.Text + /*"Duración: " + e2.Time +*/ "\nAño: " + anio + "\nDirector: " + e4.Text + "\nShortFilm: " + shortFilm
-            + "\nRecaudacion: " + e6.Text + "\nDistribuidor: " + e7.Text + "\nGenero: " + e8.Items[e8.SelectedIndex]
-            + "\nClasificacion: " + e9.Items[e9.SelectedIndex] + "\nSinopsis: " + e10.Text + "\n------------------------------------------------";
+                string text = "------------------------------------------------\nTítulo: " + e1.Text + /*"Duración: " + e2.Time +*/ "\nAño: " + anio + "\nDirector: " + e4.Text + "\nCortometraje: " + shortFilm
+            + "\nRecaudación: " + e6.Text + "\nDistribuidor: " + e7.Text + "\nGénero: " + e8.Items[e8.SelectedIndex]
+            + "\nClasificación: " + e9.Items[e9.SelectedIndex] + "\nSinopsis: " + e10.Text + "\n------------------------------------------------";
                 if (BindingContext is Models.Movie movie)
                     File.WriteAllText(movie.Filename, text);
-                await DisplayAlert("Alerta:", "Se guardo correctamente la película llamada " + e1.Text, "Ok");
+                await DisplayAlert("Alerta:", "Se guardó correctamente la película llamada " + e1.Text, "Ok");
                 await Navigation.PushAsync(new AllMoviesPage());
                 //await Shell.Current.GoToAsync("..");
             }
