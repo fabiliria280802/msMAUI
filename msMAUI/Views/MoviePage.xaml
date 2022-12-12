@@ -11,6 +11,7 @@
                    TextColor="BlueViolet"/>
             <Label Text="Ingresar nombre de la película:" />
             <Editor x:Name="e1"
+                    MaxLength="50"
                     Placeholder="Ingresar texto"
                     PlaceholderColor="BlueViolet"
                     Text="{Binding Text}"
@@ -26,6 +27,7 @@
             -->
             <Label Text="Ingresar año de la película:" />
             <Editor x:Name="e3"
+                    MaxLength="4"
                     PlaceholderColor="BlueViolet"
                     Placeholder="Ingresar texto"
                     Keyboard="Numeric"
@@ -33,6 +35,7 @@
                     TextColor="BlueViolet"/>
             <Label Text="Ingresar director de la película:" />
             <Editor x:Name="e4"
+                    MaxLength="50"
                     PlaceholderColor="BlueViolet"
                     Placeholder="Ingresar texto"
                     Text="{Binding Text}"
@@ -45,6 +48,7 @@
             </Grid>
             <Label Text="Ingresar la recaudación de la película:" />
             <Editor x:Name="e6"
+                    MaxLength="30"
                     Keyboard="Numeric"
                     PlaceholderColor="BlueViolet"
                     Placeholder="Ingresar texto"
@@ -52,6 +56,7 @@
                     TextColor="BlueViolet"/>
             <Label Text="Ingresar el nombre del distribuidor de la película:" />
             <Editor x:Name="e7"
+                    MaxLength="30"
                     PlaceholderColor="BlueViolet"
                     Placeholder="Ingresar texto"
                     Text="{Binding Text}"
@@ -96,6 +101,7 @@
             </Picker>
             <Label Text="Ingresar la sinopsis de la película:" />
             <Editor x:Name="e10"
+                    MaxLength="50"
                     PlaceholderColor="BlueViolet"
                     Placeholder="Ingresar texto"
                     Text="{Binding Text}"

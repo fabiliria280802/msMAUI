@@ -125,7 +125,7 @@ public partial class MoviePage : ContentPage
                 File.Delete(movie.Filename);
         }
 
-        await Shell.Current.GoToAsync("..");
+        await Navigation.PushAsync(new AllMoviesPage());
     }
     private void LoadMovie(string fileName)
     {
