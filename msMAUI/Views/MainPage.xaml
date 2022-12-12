@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="msMAUI.Views.MainPage"
-             Title="Movie Star">
+             Title="Menú principal">
 
     <!-- BackgroundColor="Green" -->
     <ScrollView>
@@ -11,46 +11,45 @@
             Padding="30,0"
             VerticalOptions="Center">
             <Image
-                Source="cornparty"
+                Source="cornparty.png"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
 
             <Label
                 Text="¡Qué más, Mateo!"
                 SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
+                FontSize="38"
                 FontFamily="Arial"
                 HorizontalOptions="Center" />
 
             <Label
-                Text=""
+                Text="Bienvenido a Movie Star"
                 FontFamily="Arial"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                SemanticProperties.HeadingLevel="Level1"
                 FontSize="25"
                 HorizontalOptions="Center" />
 
             <Label
-                Text="-Morpheus"
-                TextColor="Green"
+                Text="Una app de fans para fans."
+                TextColor="Black"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
-                HorizontalOptions="Start" />
-            <!--
-            <Button
-                x:Name="CounterBtn"
-                Text="Matrix"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
-            -->
-            <Button
-                x:Name="NextPage"
-                Text="Sign in"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="NextPage_Clicked"
+
+            <Label
+                Text=""
+                TextColor="Gray"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
                 HorizontalOptions="Center" />
+
+            <Label
+                Text="Explora todas las opciones del menú"
+                TextColor="Gray"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

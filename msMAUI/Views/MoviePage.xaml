@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="msMAUI.Views.MoviePage"
-             Title="Movie">
+             Title="Nueva película">
     <ScrollView>
         <StackLayout>
-            <Label Text="INFORMACIÓN GENERAL"
+            <Label Text="Cuéntanos más sobre tu peli."
                    HorizontalOptions="Center"
-                   FontSize="Title"
+                   FontSize="25"
                    TextColor="BlueViolet"/>
-            <Label Text="Ingresar nombre de la película:" />
+            <Label Text="Nombre de la película:" />
             <Editor x:Name="e1"
                     MaxLength="50"
                     Placeholder="Ingresar texto"
