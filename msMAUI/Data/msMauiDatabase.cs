@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using SQLite;
-using System.Threading.Tasks;
+﻿using SQLite;
 
 namespace msMAUI.Data
 {
-    internal class msMauiDatabase
+    public class msMauiDatabase
     {
         string _dbPath;
         public SQLiteConnection conn;
@@ -20,37 +15,37 @@ namespace msMAUI.Data
             if (conn != null)
                 return;
             conn = new SQLiteConnection(_dbPath);
-            conn.CreateTable<FLBurger>();
+            conn.CreateTable<Models.Movie>();
         }
-        public int AddNewBurger(FLBurger flburger)
+        public int AddNewBurger(Models.Movie movie)
         {
             Init();
             //int result = conn.Insert(flburger);
             //return result;
-            if (flburger.Id != 0)
+            if (movie.Id != 0)
             {
-                return conn.Update(flburger);
+                return conn.Update(movie);
             }
             else
             {
-                return conn.Insert(flburger);
+                return conn.Insert(movie);
             }
         }
-        public List<FLBurger> GetAllBurgers()
+        public List<Models.Movie> GetAllBurgers()
         {
             Init();
-            List<FLBurger> burgers = conn.Table<FLBurger>().ToList();
-            return burgers;
+            List<Models.Movie> movie = conn.Table<Models.Movie>().ToList();
+            return movie;
         }
-        public int DeleteItem(FLBurger item)
+        public int DeleteItem(Models.Movie item)
         {
             Init();
             return conn.Delete(item);
         }
-        public FLBurger ShowItem(FLBurger item)
+        public Models.Movie ShowItem(Models.Movie item)
         {
             Init();
-            List<FLBurger> burgers = conn.Table<FLBurger>().ToList();
+            List<Models.Movie> burgers = conn.Table<Models.Movie>().ToList();
             //foreach item in burgers():
             return null;
             //aqui falta codigo que recorra la lista en busca de  los datos de una determinada hamburgesa

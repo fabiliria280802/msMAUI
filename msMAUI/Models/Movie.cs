@@ -8,14 +8,12 @@ using SQLite;
 
 namespace msMAUI.Models
 {
-    [Table("msMaui")]
+    [Table("Movie")]
     public class Movie
     {
         //Esto es adicional para hacer cambios
-        /*
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        */
         public string Filename { get; set; }
 
         //public Image image { get; set; }

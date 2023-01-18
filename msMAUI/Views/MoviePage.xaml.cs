@@ -1,22 +1,30 @@
+using msMAUI.Models;
 namespace msMAUI.Views;
-[QueryProperty(nameof(ItemId), nameof(ItemId))]
+//[QueryProperty(nameof(ItemId), nameof(ItemId))]
+[QueryProperty("Item", "Item")]
 public partial class MoviePage : ContentPage
 {
-    string _fileName = Path.Combine(FileSystem.AppDataDirectory, "movies.txt");
+    //string _fileName = Path.Combine(FileSystem.AppDataDirectory, "movies.txt");
+    public Movie Item
+    {
+        get => BindingContext as Movie;
+        set => BindingContext = value;
+    }
     public MoviePage()
     {
-
-
         InitializeComponent();
         //Editor entry = new Editor { Placeholder = "Enter text" };
         //entry.TextChanged += OnEntryTextChanged;
         //entry.Completed += OnEntryCompleted;
-        string appDataPath = FileSystem.AppDataDirectory;
+
+        //se borrar por si acaso
+
+        /*string appDataPath = FileSystem.AppDataDirectory;
         string randomFileName = $"{Path.GetRandomFileName()}.movies.txt";
-        LoadMovie(Path.Combine(appDataPath, randomFileName));
+        LoadMovie(Path.Combine(appDataPath, randomFileName));*/
     }
 
-    private async void SaveButton_Clicked(object sender, EventArgs e)
+    private void SaveButton_Clicked(object sender, EventArgs e)
     {
         try
         {
@@ -45,7 +53,7 @@ public partial class MoviePage : ContentPage
             else
             {
                 anio = "";
-                await DisplayAlert("Alerta:", "No había peliculas antes de 1985 o no puedes ingresar una película después del 2022.", "OK");
+                DisplayAlert("Alerta:", "No había peliculas antes de 1985 o no puedes ingresar una película después del 2022.", "OK");
                 //num = int.Parse(e3.Text);
             }
 
@@ -72,9 +80,12 @@ public partial class MoviePage : ContentPage
             + "\nRecaudación: " + e6.Text + "\nDistribuidor: " + e7.Text + "\nGénero: " + e8.Items[e8.SelectedIndex]
             + "\nClasificación: " + e9.Items[e9.SelectedIndex] + "\nSinopsis: " + e10.Text + "\n------------------------------------------------";
                 if (BindingContext is Models.Movie movie)
-                    File.WriteAllText(movie.Filename, text);
-                await DisplayAlert("Alerta:", "Se guardó correctamente la película llamada " + e1.Text, "Ok");
-                await Navigation.PushAsync(new AllMoviesPage());
+                    App.msMAUIRepo.AddNewBurger(Item);
+                Shell.Current.GoToAsync("..");
+                /*
+                File.WriteAllText(movie.Filename, text);
+            DisplayAlert("Alerta:", "Se guardó correctamente la película llamada " + e1.Text, "Ok");
+            Navigation.PushAsync(new AllMoviesPage());*/
                 //await Shell.Current.GoToAsync("..");
             }
             else
@@ -85,16 +96,16 @@ public partial class MoviePage : ContentPage
         }
         catch (ArgumentOutOfRangeException aore)
         {
-            await DisplayAlert("Alerta:", "Debe llenar todos los campos.", "Ok");
+            DisplayAlert("Alerta:", "Debe llenar todos los campos.", "Ok");
         }
         catch (FormatException fe)
         {
             //   recaudacion = "";
-            await DisplayAlert("Alerta:", "No se pueden ingresar decimales en el año.", "OK");
+            DisplayAlert("Alerta:", "No se pueden ingresar decimales en el año.", "OK");
         }
         catch (ArgumentNullException nre)
         {
-            await DisplayAlert("Alerta:", "Debe llenar todos los campos.", "Ok");
+            DisplayAlert("Alerta:", "Debe llenar todos los campos.", "Ok");
         }
         /*do
         {
@@ -153,12 +164,10 @@ public partial class MoviePage : ContentPage
     {
         string selectedGender = (string)e8.SelectedItem;
         DisplayAlert("Seleccionaste:", selectedGender, "OK");
-
     }
     private void e9_SelectedIndexChanged(object sender, EventArgs e)
     {
         string selectedClasi = (string)e9.SelectedItem;
         DisplayAlert("Seleccionaste:", selectedClasi, "OK");
-
     }
 }

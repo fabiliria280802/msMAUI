@@ -23,13 +23,11 @@
                     PlaceholderColor="Gray"
                     Text="{Binding Text}"
                     TextColor="Black"/>
-
             <Label Text=" "
                    HorizontalOptions="Center"
                    FontSize="25"
                    FontFamily="Arial"
                    TextColor="BlueViolet"/>
-
             <Label Text="Año de la película: " HorizontalOptions="Center"/>
             <Entry x:Name="e3"
                     MaxLength="4"
@@ -38,7 +36,6 @@
                     Keyboard="Numeric"
                     Text="{Binding Text}"
                     TextColor="Black"/>
-
             <Label Text=" "
                    HorizontalOptions="Center"
                    FontSize="25"
@@ -46,33 +43,35 @@
                    TextColor="BlueViolet"/>
             <Label Text="Director de la película:"
                    HorizontalOptions="Center"/>
-
             <Entry x:Name="e4"
                     MaxLength="50"
                     PlaceholderColor="Gray"
                     Placeholder="Ejemplo: Tim Burton"
                     Text="{Binding Text}"
                     TextColor="Black"/>
-
             <Label Text=" "
                    HorizontalOptions="Center"
                    FontSize="25"
                    FontFamily="Arial"
                    TextColor="BlueViolet"/>
-
-            <Grid ColumnDefinitions="*,*" ColumnSpacing="4" Margin="10,0,10,10" HorizontalOptions="Center" VerticalOptions="Center">
-                <Label Text="¿Es un cortometraje? ( Marcar para sí )" VerticalOptions="Center"/>
-                <CheckBox x:Name="e5" Grid.Column="1" Color="BlueViolet">
-
+            <Grid ColumnDefinitions="*,*" 
+                  ColumnSpacing="4" 
+                  Margin="10,0,10,10" 
+                  HorizontalOptions="Center" 
+                  VerticalOptions="Center">
+                <Label Text="¿Es un cortometraje? ( Marcar para sí )" 
+                       VerticalOptions="Center"/>
+                <CheckBox x:Name="e5" 
+                          Grid.Column="1" 
+                          Color="BlueViolet" 
+                          IsChecked="{Binding Cortometraje}">
                 </CheckBox>
             </Grid>
-
             <Label Text=" "
                    HorizontalOptions="Center"
                    FontSize="25"
                    FontFamily="Arial"
                    TextColor="BlueViolet"/>
-
             <Label Text="Recaudación de la película: "
                    HorizontalOptions="Center"/>
             <Entry x:Name="e6"
@@ -164,7 +163,6 @@
                    FontSize="25"
                    FontFamily="Arial"
                    TextColor="BlueViolet"/>
-
             <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
                 <Button Text="Save"
                         BackgroundColor="BlueViolet"
@@ -178,5 +176,4 @@
             </Grid>
         </StackLayout>
     </ScrollView>
-
 </ContentPage>
