@@ -4,11 +4,18 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SQLite;
 
 namespace msMAUI.Models
 {
-    internal class Movie
+    [Table("msMaui")]
+    public class Movie
     {
+        //Esto es adicional para hacer cambios
+        /*
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+        */
         public string Filename { get; set; }
 
         //public Image image { get; set; }

@@ -11,7 +11,7 @@ namespace msMAUI.Data
     {
         string _dbPath;
         public SQLiteConnection conn;
-        public FLBurgerDatabase(string DatabasePath)
+        public msMauiDatabase(string DatabasePath)
         {
             _dbPath = DatabasePath;
         }
