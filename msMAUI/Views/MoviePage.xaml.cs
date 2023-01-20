@@ -46,14 +46,14 @@ public partial class MoviePage : ContentPage
             //do
             //{
             num = int.Parse(e3.Text);
-            if (num > 1985 && num <= 2022)
+            if (num > 1895 && num <= 2022)
             {
                 anio = e3.Text;
             }
             else
             {
                 anio = "";
-                DisplayAlert("Alerta:", "No había peliculas antes de 1985 o no puedes ingresar una película después del 2022.", "OK");
+                DisplayAlert("Alerta:", "No había peliculas antes de 1895 o no puedes ingresar una película después del 2022.", "OK");
                 //num = int.Parse(e3.Text);
             }
 
@@ -80,7 +80,7 @@ public partial class MoviePage : ContentPage
             + "\nRecaudación: " + e6.Text + "\nDistribuidor: " + e7.Text + "\nGénero: " + e8.Items[e8.SelectedIndex]
             + "\nClasificación: " + e9.Items[e9.SelectedIndex] + "\nSinopsis: " + e10.Text + "\n------------------------------------------------";
                 if (BindingContext is Models.Movie movie)
-                    App.msMAUIRepo.AddNewBurger(Item);
+                    App.msMAUIRepo.AddNewMovie(Item);
                 Shell.Current.GoToAsync("..");
                 /*
                 File.WriteAllText(movie.Filename, text);
@@ -122,18 +122,34 @@ public partial class MoviePage : ContentPage
 
 
     }
-
-    private async void DeleteButton_Clicked(object sender, EventArgs e)
+    private void OnSaveClicked(object sender, EventArgs e)
     {
-        if (BindingContext is Models.Movie movie)
+        //Item.Name = nameB.Text;
+        //Item.Description = descB.Text;
+        //Item.WithExtraCheese = _flag;
+        App.msMAUIRepo.AddNewMovie(Item);
+        Shell.Current.GoToAsync("..");
+        //MessagingCenter.Send(this, "itemAdded", true);
+    }
+    private void DeleteButton_Clicked(object sender, EventArgs e)
+    {
+        App.msMAUIRepo.DeleteItem(Item);
+        Shell.Current.GoToAsync(nameof(MainPage));
+        /*if (BindingContext is Models.Movie movie)
         {
             // Delete the file.
             if (File.Exists(movie.Filename))
                 File.Delete(movie.Filename);
-        }
+        }*/
 
-        await Navigation.PushAsync(new AllMoviesPage());
+        //await Navigation.PushAsync(new AllMoviesPage());
     }
+
+    private void OnCancelClicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync(nameof(MainPage));
+    }
+    /*
     private void LoadMovie(string fileName)
     {
 
@@ -141,25 +157,25 @@ public partial class MoviePage : ContentPage
         movieModel.Filename = fileName;
         if (File.Exists(fileName))
         {
-            movieModel.title = File.ReadAllText(fileName);
-            //movieModel.time = DateTime.Parse(File.ReadAllText(fileName));
-            /*movieModel.year = File.ReadAllText(fileName);
-            movieModel.director = File.ReadAllText(fileName);
-            movieModel.shortFilm = File.ReadAllText(fileName);
-            movieModel.income = File.ReadAllText(fileName);
-            movieModel.distributor = File.ReadAllText(fileName);
-            movieModel.gender = File.ReadAllText(fileName);
-            movieModel.classification = File.ReadAllText(fileName);
-            movieModel.synopsis = File.ReadAllText(fileName);*/
-        }
+            movieModel.title = File.ReadAllText(fileName);*/
+    //movieModel.time = DateTime.Parse(File.ReadAllText(fileName));
+    /*movieModel.year = File.ReadAllText(fileName);
+    movieModel.director = File.ReadAllText(fileName);
+    movieModel.shortFilm = File.ReadAllText(fileName);
+    movieModel.income = File.ReadAllText(fileName);
+    movieModel.distributor = File.ReadAllText(fileName);
+    movieModel.gender = File.ReadAllText(fileName);
+    movieModel.classification = File.ReadAllText(fileName);
+    movieModel.synopsis = File.ReadAllText(fileName);*//*
+}
 
-        BindingContext = movieModel;
-    }
-    public string ItemId
-    {
-        set { LoadMovie(value); }
-    }
-
+BindingContext = movieModel;
+}
+public string ItemId
+{
+set { LoadMovie(value); }
+}
+*/
     private void e8_SelectedIndexChanged(object sender, EventArgs e)
     {
         string selectedGender = (string)e8.SelectedItem;

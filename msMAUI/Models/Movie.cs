@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SQLite;
+﻿using SQLite;
 
 namespace msMAUI.Models
 {
@@ -14,22 +8,17 @@ namespace msMAUI.Models
         //Esto es adicional para hacer cambios
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        public string Filename { get; set; }
+        //public string Filename { get; set; }
 
         //public Image image { get; set; }
-
+        [MaxLength(250), Unique]
         public string title { get; set; }
-        public DateTime Date { get; set; }
-
-        //public string time { get; set; }*/
-
-        public string year { get; set; }
-
+        //public DateTime Date { get; set; }
+        //public string time { get; set; }
+        public int year { get; set; }
         public string director { get; set; }
-
-        public string shortFilm { get; set; }
-        public string income { get; set; }
-
+        public bool shortFilm { get; set; }
+        public double income { get; set; }
         public string distributor { get; set; }
         public string gender { get; set; }
         public string classification { get; set; }

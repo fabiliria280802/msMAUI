@@ -4,7 +4,7 @@
              x:Class="msMAUI.Views.MoviePage"
              Title="Nueva película">
     <ScrollView>
-        <StackLayout Margin="30,30,30,30">
+        <VerticalStackLayout Margin="30,30,30,30">
             <Label Text="Ingresa los detalles de la peli"
                    HorizontalOptions="Center"
                    FontSize="25"
@@ -18,11 +18,11 @@
             <Label Text="Nombre de la película: "
                    HorizontalOptions="Center"/>
             <Entry x:Name="e1"
-                    MaxLength="50"
-                    Placeholder="Ejemplo: Top Gun"
-                    PlaceholderColor="Gray"
-                    Text="{Binding Text}"
-                    TextColor="Black"/>
+                   MaxLength="50"
+                   Placeholder="Ejemplo: Top Gun"
+                   PlaceholderColor="Gray"
+                   Text="{Binding tittle}"
+                   TextColor="Black"/>
             <Label Text=" "
                    HorizontalOptions="Center"
                    FontSize="25"
@@ -30,12 +30,12 @@
                    TextColor="BlueViolet"/>
             <Label Text="Año de la película: " HorizontalOptions="Center"/>
             <Entry x:Name="e3"
-                    MaxLength="4"
-                    PlaceholderColor="Gray"
-                    Placeholder="Ejemplo: 2002"
-                    Keyboard="Numeric"
-                    Text="{Binding Text}"
-                    TextColor="Black"/>
+                   MaxLength="4"
+                   PlaceholderColor="Gray"
+                   Placeholder="Ejemplo: 2002"
+                   Keyboard="Numeric"
+                   Text="{Binding year}"
+                   TextColor="Black"/>
             <Label Text=" "
                    HorizontalOptions="Center"
                    FontSize="25"
@@ -44,27 +44,27 @@
             <Label Text="Director de la película:"
                    HorizontalOptions="Center"/>
             <Entry x:Name="e4"
-                    MaxLength="50"
-                    PlaceholderColor="Gray"
-                    Placeholder="Ejemplo: Tim Burton"
-                    Text="{Binding Text}"
-                    TextColor="Black"/>
+                   MaxLength="50"
+                   PlaceholderColor="Gray"
+                   Placeholder="Ejemplo: Tim Burton"
+                   Text="{Binding director}"
+                   TextColor="Black"/>
             <Label Text=" "
                    HorizontalOptions="Center"
                    FontSize="25"
                    FontFamily="Arial"
                    TextColor="BlueViolet"/>
-            <Grid ColumnDefinitions="*,*" 
-                  ColumnSpacing="4" 
-                  Margin="10,0,10,10" 
-                  HorizontalOptions="Center" 
+            <Grid ColumnDefinitions="*,*"
+                  ColumnSpacing="4"
+                  Margin="10,0,10,10"
+                  HorizontalOptions="Center"
                   VerticalOptions="Center">
-                <Label Text="¿Es un cortometraje? ( Marcar para sí )" 
+                <Label Text="¿Es un cortometraje? ( Marcar para sí )"
                        VerticalOptions="Center"/>
-                <CheckBox x:Name="e5" 
-                          Grid.Column="1" 
-                          Color="BlueViolet" 
-                          IsChecked="{Binding Cortometraje}">
+                <CheckBox x:Name="e5"
+                          Grid.Column="1"
+                          Color="BlueViolet"
+                          IsChecked="{Binding shortFilm}">
                 </CheckBox>
             </Grid>
             <Label Text=" "
@@ -75,12 +75,12 @@
             <Label Text="Recaudación de la película: "
                    HorizontalOptions="Center"/>
             <Entry x:Name="e6"
-                    MaxLength="30"
-                    Keyboard="Numeric"
-                    PlaceholderColor="Gray"
-                    Placeholder="Ejemplo: 1000000"
-                    Text="{Binding Text}"
-                    TextColor="Black"/>
+                   MaxLength="30"
+                   Keyboard="Numeric"
+                   PlaceholderColor="Gray"
+                   Placeholder="Ejemplo: 1000000"
+                   Text="{Binding income}"
+                   TextColor="Black"/>
             <Label Text=" "
                    HorizontalOptions="Center"
                    FontSize="25"
@@ -89,11 +89,11 @@
             <Label Text="Distribuidor de la película: "
                    HorizontalOptions="Center"/>
             <Entry x:Name="e7"
-                    MaxLength="30"
-                    PlaceholderColor="Gray"
-                    Placeholder="Ejemplo: Universal Pictures"
-                    Text="{Binding Text}"
-                    TextColor="Black"/>
+                   MaxLength="30"
+                   PlaceholderColor="Gray"
+                   Placeholder="Ejemplo: Universal Pictures"
+                   Text="{Binding distributor}"
+                   TextColor="Black"/>
             <Label Text=" "
                    HorizontalOptions="Center"
                    FontSize="25"
@@ -104,7 +104,7 @@
             <Picker x:Name="e8"
                     Title="Seleccionar"
                     TitleColor="Violet"
-                    ItemDisplayBinding="{Binding Text}"
+                    ItemDisplayBinding="{Binding gender}"
                     TextColor="BlueViolet"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
@@ -132,7 +132,7 @@
                 x:Name="e9"
                 Title="Seleccione"
                 TitleColor="Violet"
-                ItemDisplayBinding="{Binding Text}"
+                ItemDisplayBinding="{Binding classification}"
                 TextColor="BlueViolet"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand"
@@ -152,28 +152,32 @@
             <Label Text="Sinopsis de la película: "
                    HorizontalOptions="Center"/>
             <Entry x:Name="e10"
-                    MaxLength="50"
-                    PlaceholderColor="Gray"
-                    Placeholder="Ejemplo: El ganador del año se convierte en el Top Gun."
-                    Text="{Binding Text}"
-                    TextColor="BlueViolet"
-                    />
+                   MaxLength="50"
+                   PlaceholderColor="Gray"
+                   Placeholder="Ejemplo: El ganador del año se convierte en el Top Gun."
+                   Text="{Binding synopsis}"
+                   TextColor="BlueViolet"
+                   />
             <Label Text=" "
                    HorizontalOptions="Center"
                    FontSize="25"
                    FontFamily="Arial"
                    TextColor="BlueViolet"/>
-            <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
-                <Button Text="Save"
+            <Grid ColumnDefinitions="*,*,*" ColumnSpacing="4">
+                <Button Text="Guardar"
                         BackgroundColor="BlueViolet"
-                        Clicked="SaveButton_Clicked"
+                        Clicked="OnSaveClicked"
+                        />
+                <Button Text="Cancelar"
+                        BackgroundColor="BlueViolet"
+                        Clicked="OnCancelClicked"
                         />
                 <Button Grid.Column="1"
-                        Text="Delete"
+                        Text="Eliminar"
                         BackgroundColor="BlueViolet"
                         Clicked="DeleteButton_Clicked"
                         />
             </Grid>
-        </StackLayout>
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

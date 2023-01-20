@@ -17,7 +17,7 @@ namespace msMAUI.Data
             conn = new SQLiteConnection(_dbPath);
             conn.CreateTable<Models.Movie>();
         }
-        public int AddNewBurger(Models.Movie movie)
+        public int AddNewMovie(Models.Movie movie)
         {
             Init();
             //int result = conn.Insert(flburger);
@@ -31,7 +31,7 @@ namespace msMAUI.Data
                 return conn.Insert(movie);
             }
         }
-        public List<Models.Movie> GetAllBurgers()
+        public List<Models.Movie> GetAllMovies()
         {
             Init();
             List<Models.Movie> movie = conn.Table<Models.Movie>().ToList();
@@ -45,7 +45,7 @@ namespace msMAUI.Data
         public Models.Movie ShowItem(Models.Movie item)
         {
             Init();
-            List<Models.Movie> burgers = conn.Table<Models.Movie>().ToList();
+            List<Models.Movie> movies = conn.Table<Models.Movie>().ToList();
             //foreach item in burgers():
             return null;
             //aqui falta codigo que recorra la lista en busca de  los datos de una determinada hamburgesa

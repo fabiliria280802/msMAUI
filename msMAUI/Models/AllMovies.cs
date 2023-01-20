@@ -9,46 +9,46 @@ namespace msMAUI.Models
 {
     internal class AllMovies
     {
-        public ObservableCollection<Movie> Movies { get; set; } = new ObservableCollection<Movie>();
-        public AllMovies() =>
-            LoadMovies();
+        /* public ObservableCollection<Movie> Movies { get; set; } = new ObservableCollection<Movie>();
+         public AllMovies() =>
+             LoadMovies();
 
-        public void LoadMovies()
-        {
-            Movies.Clear();
+         public void LoadMovies()
+         {
+             Movies.Clear();
 
-            // Get the folder where the notes are stored.
-            string appDataPath = FileSystem.AppDataDirectory;
+             // Get the folder where the notes are stored.
+             string appDataPath = FileSystem.AppDataDirectory;
 
-            // Use Linq extensions to load the *.notes.txt files.
-            IEnumerable<Movie> movies = Directory
+             // Use Linq extensions to load the *.notes.txt files.
+             IEnumerable<Movie> movies = Directory
 
-                                        // Select the file names from the directory
-                                        .EnumerateFiles(appDataPath, "*.movies.txt")
+                                         // Select the file names from the directory
+                                         .EnumerateFiles(appDataPath, "*.movies.txt")
 
-                                        // Each file name is used to create a new Note
-                                        .Select(filename => new Movie()
-                                        {
-                                            Filename = filename,
-                                            title = File.ReadAllText(filename),
-                                            Date = File.GetCreationTime(filename),
-                                            //time = File.ReadAllText(filename),
-                                            year = File.ReadAllText(filename),
-                                            director = File.ReadAllText(filename),
-                                            shortFilm = File.ReadAllText(filename),
-                                            income = File.ReadAllText(filename),
-                                            distributor = File.ReadAllText(filename),
-                                            gender = File.ReadAllText(filename),
-                                            classification = File.ReadAllText(filename),
-                                            synopsis = File.ReadAllText(filename)
-                                        })
+                                         // Each file name is used to create a new Note
+                                         .Select(filename => new Movie()
+                                         {
+                                             Filename = filename,
+                                             title = File.ReadAllText(filename),
+                                             Date = File.GetCreationTime(filename),
+                                             //time = File.ReadAllText(filename),
+                                             year = File.ReadAllText(filename),
+                                             director = File.ReadAllText(filename),
+                                             shortFilm = File.ReadAllText(filename),
+                                             income = File.ReadAllText(filename),
+                                             distributor = File.ReadAllText(filename),
+                                             gender = File.ReadAllText(filename),
+                                             classification = File.ReadAllText(filename),
+                                             synopsis = File.ReadAllText(filename)
+                                         })
 
-                                        // With the final collection of notes, order them by date
-                                        .OrderBy(movie => movie.Date);
+                                         // With the final collection of notes, order them by date
+                                         .OrderBy(movie => movie.Date);
 
-            // Add each note into the ObservableCollection
-            foreach (Movie movie in movies)
-                Movies.Add(movie);
-        }
+             // Add each note into the ObservableCollection
+             foreach (Movie movie in movies)
+                 Movies.Add(movie);
+         }*/
     }
 }
