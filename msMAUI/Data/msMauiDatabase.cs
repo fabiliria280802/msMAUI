@@ -1,5 +1,5 @@
 ﻿using SQLite;
-
+using msMAUI.Models;
 namespace msMAUI.Data
 {
     public class msMauiDatabase
@@ -15,9 +15,9 @@ namespace msMAUI.Data
             if (conn != null)
                 return;
             conn = new SQLiteConnection(_dbPath);
-            conn.CreateTable<Models.Movie>();
+            conn.CreateTable<Movie>();
         }
-        public int AddNewMovie(Models.Movie movie)
+        public int AddNewMovie(Movie movie)
         {
             Init();
             //int result = conn.Insert(flburger);
@@ -31,21 +31,21 @@ namespace msMAUI.Data
                 return conn.Insert(movie);
             }
         }
-        public List<Models.Movie> GetAllMovies()
+        public List<Movie> GetAllMovies()
         {
             Init();
-            List<Models.Movie> movie = conn.Table<Models.Movie>().ToList();
+            List<Movie> movie = conn.Table<Movie>().ToList();
             return movie;
         }
-        public int DeleteItem(Models.Movie item)
+        public int DeleteItem(Movie item)
         {
             Init();
             return conn.Delete(item);
         }
-        public Models.Movie ShowItem(Models.Movie item)
+        public Movie ShowItem(Movie item)
         {
             Init();
-            List<Models.Movie> movies = conn.Table<Models.Movie>().ToList();
+            List<Movie> movies = conn.Table<Movie>().ToList();
             //foreach item in burgers():
             return null;
             //aqui falta codigo que recorra la lista en busca de  los datos de una determinada hamburgesa
