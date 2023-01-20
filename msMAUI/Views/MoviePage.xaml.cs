@@ -1,4 +1,5 @@
 using msMAUI.Models;
+using msMAUI.Data;
 namespace msMAUI.Views;
 //[QueryProperty(nameof(ItemId), nameof(ItemId))]
 [QueryProperty("Item", "Item")]
@@ -127,8 +128,16 @@ public partial class MoviePage : ContentPage
         //Item.Name = nameB.Text;
         //Item.Description = descB.Text;
         //Item.WithExtraCheese = _flag;
-        App.msMAUIRepo.AddNewMovie(Item);
-        Shell.Current.GoToAsync("..");
+        try
+        {
+            App.msMAUIRepo.AddNewMovie(Item);
+            Shell.Current.GoToAsync(nameof(AllMoviesPage));
+        }
+        catch (Exception ee)
+        {
+            Shell.Current.GoToAsync(nameof(MainPage));
+        }
+
         //MessagingCenter.Send(this, "itemAdded", true);
     }
     private void DeleteButton_Clicked(object sender, EventArgs e)
