@@ -165,11 +165,14 @@
                    FontFamily="Arial"
                    TextColor="BlueViolet"/>
             <Grid ColumnDefinitions="*,*,*" ColumnSpacing="4">
-                <Button Text="Guardar"
+                <Button Grid.Column="3"
+                        Text="Guardar"
                         BackgroundColor="BlueViolet"
                         Clicked="OnSaveClicked"
                         />
-                <Button Text="Cancelar"
+                <!--
+                <Button Grid.Column="2"
+                        Text="Cancelar"
                         BackgroundColor="BlueViolet"
                         Clicked="OnCancelClicked"
                         />
@@ -178,6 +181,7 @@
                         BackgroundColor="BlueViolet"
                         Clicked="DeleteButton_Clicked"
                         />
+                -->
             </Grid>
         </VerticalStackLayout>
     </ScrollView>

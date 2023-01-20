@@ -22,20 +22,28 @@ namespace msMAUI.Data
             Init();
             //int result = conn.Insert(flburger);
             //return result;
-            if (movie.Id != 0)
+            try
             {
-                return conn.Update(movie);
+                if (movie.Id != 0)
+                {
+                    return conn.Update(movie);
+                }
+                else
+                {
+                    return conn.Insert(movie);
+                }
             }
-            else
+            catch (Exception eee)
             {
-                return conn.Insert(movie);
+                return movie.Id;
             }
+
         }
         public List<Movie> GetAllMovies()
         {
             Init();
-            List<Movie> movie = conn.Table<Movie>().ToList();
-            return movie;
+            List<Movie> movies = conn.Table<Movie>().ToList();
+            return movies;
         }
         public int DeleteItem(Movie item)
         {

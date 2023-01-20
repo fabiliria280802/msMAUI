@@ -14,7 +14,7 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
-        string dbPath = msMauiFileAccessHelper.GetLocalFilePath("flburger.db3");
+        string dbPath = msMauiFileAccessHelper.GetLocalFilePath("movie.db3");
         builder.Services.AddSingleton<msMauiDatabase>(s => ActivatorUtilities.CreateInstance<msMauiDatabase>(s, dbPath));
         return builder.Build();
     }
