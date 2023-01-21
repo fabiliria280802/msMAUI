@@ -8,7 +8,7 @@
         <Grid RowDefinitions="*,Auto">
             <CollectionView x:Name="movieList"
                             SelectionMode="Single"
-                            SelectionChanged="moviesCollection_SelectionChanged">
+                            SelectionChanged="OnCollectionViewSelectionChanged">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:Movie">
                         <Grid>

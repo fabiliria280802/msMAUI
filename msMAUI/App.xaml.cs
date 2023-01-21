@@ -6,7 +6,8 @@ public partial class App : Application
     public App(msMauiDatabase repo)
     {
         InitializeComponent();
-        MainPage = new Views.Bienvenida();
+        MainPage = new AppShell();
+        //MainPage = new Views.AllMoviesPage();
         msMAUIRepo = repo;
     }
 }

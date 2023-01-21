@@ -1,7 +1,6 @@
 using msMAUI.Models;
 using msMAUI.Data;
 namespace msMAUI.Views;
-
 public partial class AllMoviesPage : ContentPage
 {
     public AllMoviesPage()
@@ -39,7 +38,7 @@ public partial class AllMoviesPage : ContentPage
         //base.OnNavigatedTo(args);
     }
 
-    private void moviesCollection_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    private void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         //Aqui falta codigo que tome el item seleccionado y lo pase a la pagina FLBurgerItemPage
         Movie movies = e.CurrentSelection.FirstOrDefault() as Movie;

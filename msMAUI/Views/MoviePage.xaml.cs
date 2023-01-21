@@ -128,22 +128,23 @@ public partial class MoviePage : ContentPage
         //Item.Name = nameB.Text;
         //Item.Description = descB.Text;
         //Item.WithExtraCheese = _flag;
-        try
-        {
-            App.msMAUIRepo.AddNewMovie(Item);
-            Shell.Current.GoToAsync(nameof(AllMoviesPage));
-        }
-        catch (Exception ee)
-        {
-            Shell.Current.GoToAsync(nameof(MainPage));
-        }
+        //try
+        //{
+        App.msMAUIRepo.AddNewMovie(Item);
+        Shell.Current.GoToAsync("..");
+        //}
+        //catch (Exception ee)
+        //{
+        // Shell.Current.GoToAsync(nameof(MainPage));
+        //}
 
         //MessagingCenter.Send(this, "itemAdded", true);
     }
     private void DeleteButton_Clicked(object sender, EventArgs e)
     {
         App.msMAUIRepo.DeleteItem(Item);
-        Shell.Current.GoToAsync(nameof(MainPage));
+        Shell.Current.GoToAsync("..");
+        //Shell.Current.GoToAsync(nameof(MainPage));
         /*if (BindingContext is Models.Movie movie)
         {
             // Delete the file.
@@ -156,7 +157,8 @@ public partial class MoviePage : ContentPage
 
     private void OnCancelClicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync(nameof(MainPage));
+        Shell.Current.GoToAsync("..");
+        //Shell.Current.GoToAsync(nameof(MainPage));
     }
     /*
     private void LoadMovie(string fileName)
@@ -194,5 +196,63 @@ set { LoadMovie(value); }
     {
         string selectedClasi = (string)e9.SelectedItem;
         DisplayAlert("Seleccionaste:", selectedClasi, "OK");
+    }
+
+    private void e1_TextChanged(object sender, TextChangedEventArgs e)
+    {
+
+    }
+
+    private void e3_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        /*
+        int num;
+        string anio;
+        num = int.Parse(e3.Text);
+        if (num > 1895 && num <= 2022)
+        {
+            anio = e3.Text;
+        }
+        else
+        {
+            anio = "";
+            DisplayAlert("Alerta:", "No había peliculas antes de 1895 o no puedes ingresar una película después del 2022.", "OK");
+            //num = int.Parse(e3.Text);
+        }*/
+    }
+
+    private void e1_TextChanged_1(object sender, TextChangedEventArgs e)
+    {
+
+    }
+
+    private void e4_TextChanged(object sender, TextChangedEventArgs e)
+    {
+
+    }
+
+    private void e6_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        /* decimal num2 = decimal.Parse(e6.Text);
+         string recaudacion;
+         if (num2 > 0)
+         {
+             recaudacion = e6.Text;
+         }
+         else
+         {
+             recaudacion = null;
+             DisplayAlert("Alerta:", "No puede ingresar valores menores a 0.", "OK");
+         }*/
+    }
+
+    private void e7_TextChanged(object sender, TextChangedEventArgs e)
+    {
+
+    }
+
+    private void e10_TextChanged(object sender, TextChangedEventArgs e)
+    {
+
     }
 }

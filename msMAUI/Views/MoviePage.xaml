@@ -5,56 +5,42 @@
              x:Class="msMAUI.Views.MoviePage"
              Title="Nueva película">
     <ScrollView>
-        <VerticalStackLayout Margin="30,30,30,30">
+        <VerticalStackLayout Padding="20"
+                             Spacing="10"
+                             VerticalOptions="StartAndExpand"
+                             Margin="30,30,30,30">
             <Label Text="Ingresa los detalles de la peli"
                    HorizontalOptions="Center"
                    FontSize="25"
                    FontFamily="Arial"
-                   TextColor="BlueViolet"/>
-            <Label Text=" "
-                   HorizontalOptions="Center"
-                   FontSize="25"
-                   FontFamily="Arial"
-                   TextColor="BlueViolet"/>
+                   TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
             <Label Text="Nombre de la película: "
                    HorizontalOptions="Center"/>
             <Entry x:Name="e1"
                    MaxLength="50"
                    Placeholder="Ejemplo: Top Gun"
-                   PlaceholderColor="Gray"
-                   Text="{Binding tittle}"
-                   TextColor="Black"/>
-            <Label Text=" "
-                   HorizontalOptions="Center"
-                   FontSize="25"
-                   FontFamily="Arial"
-                   TextColor="BlueViolet"/>
+                   PlaceholderColor="{AppThemeBinding Light=Black, Dark=White}"
+                   Text="{Binding title}"
+                   TextChanged="e1_TextChanged_1"
+                   TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
             <Label Text="Año de la película: " HorizontalOptions="Center"/>
             <Entry x:Name="e3"
                    MaxLength="4"
-                   PlaceholderColor="Gray"
+                   PlaceholderColor="{AppThemeBinding Light=Black, Dark=White}"
                    Placeholder="Ejemplo: 2002"
                    Keyboard="Numeric"
                    Text="{Binding year}"
-                   TextColor="Black"/>
-            <Label Text=" "
-                   HorizontalOptions="Center"
-                   FontSize="25"
-                   FontFamily="Arial"
-                   TextColor="BlueViolet"/>
+                   TextChanged="e3_TextChanged"
+                   TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
             <Label Text="Director de la película:"
                    HorizontalOptions="Center"/>
             <Entry x:Name="e4"
                    MaxLength="50"
-                   PlaceholderColor="Gray"
+                   PlaceholderColor="{AppThemeBinding Light=Black, Dark=White}"
                    Placeholder="Ejemplo: Tim Burton"
+                   TextChanged="e4_TextChanged"
                    Text="{Binding director}"
-                   TextColor="Black"/>
-            <Label Text=" "
-                   HorizontalOptions="Center"
-                   FontSize="25"
-                   FontFamily="Arial"
-                   TextColor="BlueViolet"/>
+                   TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
             <Grid ColumnDefinitions="*,*"
                   ColumnSpacing="4"
                   Margin="10,0,10,10"
@@ -64,49 +50,44 @@
                        VerticalOptions="Center"/>
                 <CheckBox x:Name="e5"
                           Grid.Column="1"
-                          Color="BlueViolet"
+                          Color="{AppThemeBinding Light=Black, Dark=White}"
                           IsChecked="{Binding shortFilm}">
                 </CheckBox>
             </Grid>
+            <!--
             <Label Text=" "
-                   HorizontalOptions="Center"
-                   FontSize="25"
-                   FontFamily="Arial"
-                   TextColor="BlueViolet"/>
+            HorizontalOptions="Center"
+            FontSize="25"
+            FontFamily="Arial"
+            TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+            -->
             <Label Text="Recaudación de la película: "
                    HorizontalOptions="Center"/>
             <Entry x:Name="e6"
                    MaxLength="30"
                    Keyboard="Numeric"
-                   PlaceholderColor="Gray"
+                   PlaceholderColor="{AppThemeBinding Light=Black, Dark=White}"
                    Placeholder="Ejemplo: 1000000"
+                   TextChanged="e6_TextChanged"
                    Text="{Binding income}"
-                   TextColor="Black"/>
-            <Label Text=" "
-                   HorizontalOptions="Center"
-                   FontSize="25"
-                   FontFamily="Arial"
-                   TextColor="BlueViolet"/>
+                   TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+
             <Label Text="Distribuidor de la película: "
                    HorizontalOptions="Center"/>
             <Entry x:Name="e7"
                    MaxLength="30"
-                   PlaceholderColor="Gray"
+                   PlaceholderColor="{AppThemeBinding Light=Black, Dark=White}"
                    Placeholder="Ejemplo: Universal Pictures"
                    Text="{Binding distributor}"
-                   TextColor="Black"/>
-            <Label Text=" "
-                   HorizontalOptions="Center"
-                   FontSize="25"
-                   FontFamily="Arial"
-                   TextColor="BlueViolet"/>
+                   TextChanged="e7_TextChanged"
+                   TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
             <Label Text="Género de la película: "
                    HorizontalOptions="Center"/>
             <Picker x:Name="e8"
                     Title="Seleccionar"
-                    TitleColor="Violet"
+                    TitleColor="{AppThemeBinding Light=Black, Dark=White}"
                     ItemDisplayBinding="{Binding gender}"
-                    TextColor="BlueViolet"
+                    TextColor="{AppThemeBinding Light=Black, Dark=White}"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
                     Margin="10,0,10,10"
@@ -122,19 +103,14 @@
                     <x:String>Comedia</x:String>
                 </Picker.Items>
             </Picker>
-            <Label Text=" "
-                   HorizontalOptions="Center"
-                   FontSize="25"
-                   FontFamily="Arial"
-                   TextColor="BlueViolet"/>
             <Label Text="Clasificación de la película: "
                    HorizontalOptions="Center"/>
             <Picker
                 x:Name="e9"
                 Title="Seleccione"
-                TitleColor="Violet"
+                TitleColor="{AppThemeBinding Light=Black, Dark=White}"
                 ItemDisplayBinding="{Binding classification}"
-                TextColor="BlueViolet"
+                TextColor="{AppThemeBinding Light=Black, Dark=White}"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand"
                 Margin="10,0,10,10"
@@ -145,44 +121,50 @@
                     <x:String>18+</x:String>
                 </Picker.Items>
             </Picker>
-            <Label Text=" "
-                   HorizontalOptions="Center"
-                   FontSize="25"
-                   FontFamily="Arial"
-                   TextColor="BlueViolet"/>
             <Label Text="Sinopsis de la película: "
                    HorizontalOptions="Center"/>
             <Entry x:Name="e10"
                    MaxLength="50"
-                   PlaceholderColor="Gray"
+                   PlaceholderColor="{AppThemeBinding Light=Black, Dark=White}"
                    Placeholder="Ejemplo: El ganador del año se convierte en el Top Gun."
                    Text="{Binding synopsis}"
-                   TextColor="BlueViolet"
+                   TextChanged="e10_TextChanged"
+                   TextColor="{AppThemeBinding Light=Black, Dark=White}"
                    />
-            <Label Text=" "
-                   HorizontalOptions="Center"
-                   FontSize="25"
-                   FontFamily="Arial"
-                   TextColor="BlueViolet"/>
-            <Grid ColumnDefinitions="*,*,*" ColumnSpacing="4">
-                <Button Grid.Column="3"
-                        Text="Guardar"
-                        BackgroundColor="BlueViolet"
-                        Clicked="OnSaveClicked"
-                        />
-                <!--
-                <Button Grid.Column="2"
-                        Text="Cancelar"
-                        BackgroundColor="BlueViolet"
-                        Clicked="OnCancelClicked"
-                        />
-                <Button Grid.Column="1"
-                        Text="Eliminar"
-                        BackgroundColor="BlueViolet"
-                        Clicked="DeleteButton_Clicked"
-                        />
-                -->
-            </Grid>
+            <Button
+                Text="Guardar"
+                BackgroundColor="{AppThemeBinding Light=Black, Dark=White}"
+                Clicked="OnSaveClicked"
+                />
+            <Button
+                Text="Cancelar"
+                BackgroundColor="{AppThemeBinding Light=Black, Dark=White}"
+                Clicked="OnCancelClicked"
+                />
+            <Button
+                Text="Eliminar"
+                BackgroundColor="{AppThemeBinding Light=Black, Dark=White}"
+                Clicked="DeleteButton_Clicked"
+                />
+            <!--
+            <Grid ColumnDefinitions="*,*,*"
+            ColumnSpacing="4">
+            <Button Grid.Row="1"
+            Text="Guardar"
+            BackgroundColor="{AppThemeBinding Light=Black, Dark=White}"
+            Clicked="OnSaveClicked"
+            />
+            <Button Grid.Column="2"
+            Text="Cancelar"
+            BackgroundColor="{AppThemeBinding Light=Black, Dark=White}"
+            Clicked="OnCancelClicked"
+            />
+            <Button Grid.Column="1"
+            Text="Eliminar"
+            BackgroundColor="{AppThemeBinding Light=Black, Dark=White}"
+            Clicked="DeleteButton_Clicked"
+            />
+            </Grid>-->
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

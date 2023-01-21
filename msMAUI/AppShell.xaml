@@ -3,27 +3,30 @@
     x:Class="msMAUI.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:views="clr-namespace:msMAUI.Views"
+    xmlns:local="clr-namespace:msMAUI.Views"
     Shell.FlyoutBehavior="Disabled">
     <TabBar>
+        <!--
         <ShellContent
-            Title="Inicio"
-            ContentTemplate="{DataTemplate views:MainPage}"
-            Icon="homepage"/>
-
+        Title="Inicio"
+        ContentTemplate="{DataTemplate views:MainPage}"
+        Icon="homepage"/>
+        -->
         <ShellContent
             Title="Nuevo"
-            ContentTemplate="{DataTemplate views:MoviePage}"
+            ContentTemplate="{DataTemplate local:AllMoviesPage}"
+            Route="AllMoviesPage"
             Icon="moviereel"/>
+        <!--
+        <ShellContent
+        Title="Biblioteca"
+        ContentTemplate="{DataTemplate views:AllMoviesPage}"
+        Icon="play"/>
 
         <ShellContent
-            Title="Biblioteca"
-            ContentTemplate="{DataTemplate views:AllMoviesPage}"
-            Icon="play"/>
-
-        <ShellContent
-            Title="Nosotros"
-            ContentTemplate="{DataTemplate views:AboutPage}"
-            Icon="infobutton" />
+        Title="Nosotros"
+        ContentTemplate="{DataTemplate views:AboutPage}"
+        Icon="infobutton" />
+        -->
     </TabBar>
 </Shell>

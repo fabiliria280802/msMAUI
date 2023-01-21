@@ -68,23 +68,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<MauiXaml Update="Views\AboutPage.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
 		<MauiXaml Update="Views\AllMoviesPage.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Views\LoginPage.xaml">
-		  <Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Views\UsersPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Views\MoviePage.xaml">
 			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Views\Bienvenida.xaml">
-		  <SubType></SubType>
 		</MauiXaml>
 	</ItemGroup>
 
