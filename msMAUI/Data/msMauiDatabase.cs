@@ -1,9 +1,16 @@
-﻿using SQLite;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using msMAUI.Models;
+using msMAUI.Services;
+using msMAUI.Views;
+using SQLite;
+using System.Collections.ObjectModel;
 namespace msMAUI.Data
 {
     public class msMauiDatabase
     {
+        //public ObservableCollection<Movie> Movies { get; set; } = new ObservableCollection<Movie>();
+        //private readonly IMovieService _movieService;
         string _dbPath;
         public SQLiteConnection conn;
         public msMauiDatabase(string DatabasePath)
