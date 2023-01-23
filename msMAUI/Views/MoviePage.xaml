@@ -22,7 +22,8 @@
             </Style>
             <Style TargetType="Picker">
                 <Setter Property="TitleColor" Value="{AppThemeBinding Light=Black, Dark=White}"/>
-                <Setter Property="TextColor" Value="{AppThemeBinding Light=White, Dark=Black}"/>
+                <!--<Setter Property="BackgroundColor" -->
+                <Setter Property="TextColor" Value="{AppThemeBinding Light=Black, Dark=White}"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>

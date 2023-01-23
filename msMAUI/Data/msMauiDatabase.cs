@@ -26,7 +26,7 @@ namespace msMAUI.Data
             {
                 if (movie.Id != 0)
                 {
-                    return conn.Update(movie);
+                   return conn.Update(movie);
                 }
                 else
                 {
