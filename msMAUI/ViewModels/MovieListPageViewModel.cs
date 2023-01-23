@@ -35,6 +35,7 @@ namespace msMAUI.ViewModels
         {
             await AppShell.Current.GoToAsync(nameof(AddUpdateMovieDetailViewModel));
         }
+        /*
         [RelayCommand]
         public async void DisplayAction(Movie movie)
         {
@@ -53,6 +54,6 @@ namespace msMAUI.ViewModels
                     GetMovieList();
                 }
             }
-        }
+        }*/
     }
 }

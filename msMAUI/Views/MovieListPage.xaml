@@ -34,7 +34,7 @@
                                 </StackLayout>
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:MovieListPageViewModel}},Path=DisplayActionCommand}"
-                                                  CommandParameter="{Binding .}"/>
+                                                          CommandParameter="{Binding .}"/>
                                 </Frame.GestureRecognizers>
                             </Frame>
                         </DataTemplate>
@@ -44,3 +44,4 @@
         </StackLayout>
     </ScrollView>
 </ContentPage>
+
