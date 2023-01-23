@@ -10,38 +10,42 @@
         <ResourceDictionary>
             <Style TargetType="Label">
                 <Setter Property="FontSize" Value="14"/>
-                <Setter Property="TextColor" Value="{AppThemeBinding Light=Black, Dark=White}"/>
+                <Setter Property="TextColor" Value="{AppThemeBinding Light=White, Dark=Black}"/>
             </Style>
             <Style TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=Black, Dark=White}"/>
                 <Setter Property="TextColor" Value="{AppThemeBinding Light=White, Dark=Black}"/>
+            </Style>
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=Black, Dark=White}"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ScrollView>
         <StackLayout>
             <VerticalStackLayout>
-                <CollectionView ItemsSource="{Binding Movies}">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate x:DataType="models:Movie">
-                            <Frame Margin="10" Padding="10">
-                                <StackLayout Margin="10">
-                                    <VerticalStackLayout Spacing="15">
-                                        <Label Text="{Binding title}" FontSize="18" FontAttributes="Bold"/>
-                                        <Label Text="{Binding synopsis}" FontSize="15" FontAttributes="Italic"/>
-                                    </VerticalStackLayout>
-                                    <Button Text="Añadir nuevo" Command="{Binding AddUpdateMovieCommand}" HorizontalOptions="EndAndExpand"/>
-                                </StackLayout>
-                                <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:MovieListPageViewModel}},Path=DisplayActionCommand}"
-                                                          CommandParameter="{Binding .}"/>
-                                </Frame.GestureRecognizers>
-                            </Frame>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
+                <Grid RowDefinitions="*,Auto">
+                    <CollectionView ItemsSource="{Binding Movies}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="models:Movie">
+                                <Frame Margin="10" Padding="10">
+                                    <StackLayout Margin="10">
+                                        <VerticalStackLayout Spacing="15">
+                                            <Label Text="{Binding title}" FontSize="18" FontAttributes="Bold"/>
+                                            <Label Text="{Binding synopsis}" FontSize="15" FontAttributes="Italic"/>
+                                        </VerticalStackLayout>
+                                    </StackLayout>
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:MovieListPageViewModel}},Path=DisplayActionCommand}"
+                                                              CommandParameter="{Binding .}"/>
+                                    </Frame.GestureRecognizers>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    <Button Text="Añadir nuevo" Command="{Binding AddUpdateMovieCommand}" HorizontalOptions="EndAndExpand"/>
+                </Grid>
             </VerticalStackLayout>
         </StackLayout>
     </ScrollView>
 </ContentPage>
-
