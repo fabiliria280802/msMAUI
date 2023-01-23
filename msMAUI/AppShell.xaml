@@ -11,8 +11,20 @@
         Title="Inicio"
         ContentTemplate="{DataTemplate views:MainPage}"
         Icon="homepage"/>
-        -->
+         -->
+        <ShellContent
+            Title="Nuevo"
+            ContentTemplate="{DataTemplate local:AddUpdateMovieDetail}"
+            Route="AddUpdateMovieDetail"
+            Icon="play"/>
 
+        <ShellContent
+            Title="Biblioteca"
+            ContentTemplate="{DataTemplate local:MovieListPage}"
+            Route="MovieListPage"
+            Icon="moviereel"/>
+
+        <!--
         <ShellContent
             Title="Nuevo"
             ContentTemplate="{DataTemplate local:MoviePage}"
@@ -24,7 +36,7 @@
             ContentTemplate="{DataTemplate local:AllMoviesPage}"
             Route="AllMoviesPage"
             Icon="moviereel"/>
-
+-->
         <ShellContent
             Title="Nosotrxs"
             ContentTemplate="{DataTemplate local:AboutPage}"

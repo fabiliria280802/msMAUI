@@ -2,7 +2,7 @@
 
 namespace msMAUI.Models
 {
-    [Table("movie")]
+    [Table("Movie")]
     public class Movie
     {
         //Esto es adicional para hacer cambios

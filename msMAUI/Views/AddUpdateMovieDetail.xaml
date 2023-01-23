@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="msMAUI.Views.AddUpdateMovieDetail"
+             Title="Nueva película">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor" Value="{AppThemeBinding Light=Black, Dark=White}"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Ingresa los detalles de la peli"
+                   HorizontalOptions="Center"
+                   FontSize="25"
+                   FontFamily="Arial"/>
+            <HorizontalStackLayout>
+                <Label Text="Nombre de la película: "/>
+                <Entry x:Name="e1"
+                   MaxLength="50"
+                   Placeholder="Ejemplo: Top Gun"
+                   PlaceholderColor="{AppThemeBinding Light=Black, Dark=White}"
+                   Text="{Binding MovieDetail.title}"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Año de la película: " HorizontalOptions="Center"/>
+                <Entry x:Name="e3"
+                   MaxLength="4"
+                   PlaceholderColor="{AppThemeBinding Light=Black, Dark=White}"
+                   Placeholder="Ejemplo: 2002"
+                   Keyboard="Numeric"
+                   Text="{Binding MovieDetail.year}"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Director de la película:"/>
+                <Entry x:Name="e4"
+                   MaxLength="50"
+                   PlaceholderColor="{AppThemeBinding Light=Black, Dark=White}"
+                   Placeholder="Ejemplo: Tim Burton"
+                   Text="{Binding MovieDetail.director}"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="¿Es un cortometraje? ( Marcar para sí )"/>
+                <CheckBox x:Name="e5"
+                          Color="{AppThemeBinding Light=Black, Dark=White}"
+                          IsChecked="{Binding  MovieDetail.shortFilm}">
+                </CheckBox>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Recaudación de la película: "/>
+                <Entry x:Name="e6"
+                   MaxLength="30"
+                   Keyboard="Numeric"
+                   PlaceholderColor="{AppThemeBinding Light=Black, Dark=White}"
+                   Placeholder="Ejemplo: 1000000"
+                   Text="{Binding MovieDetail.income}"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Distribuidor de la película: "/>
+                <Entry x:Name="e7"
+                   MaxLength="30"
+                   PlaceholderColor="{AppThemeBinding Light=Black, Dark=White}"
+                   Placeholder="Ejemplo: Universal Pictures"
+                   Text="{Binding MovieDetail.distributor}"/>
+            </HorizontalStackLayout>
+            <VerticalStackLayout>
+                <Label Text="Género de la película: "
+                   HorizontalOptions="Center"/>
+                <Picker x:Name="e8"
+                    Title="Seleccionar"
+                    TitleColor="{AppThemeBinding Light=Black, Dark=White}"
+                    ItemDisplayBinding="{Binding MovieDetail.gender}"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Margin="10,0,10,10">
+                    <Picker.Items>
+                        <x:String>Acción</x:String>
+                        <x:String>Musical</x:String>
+                        <x:String>Aventura</x:String>
+                        <x:String>Ciencia Ficción</x:String>
+                        <x:String>Terror</x:String>
+                        <x:String>Misterio</x:String>
+                        <x:String>Comedia</x:String>
+                    </Picker.Items>
+                </Picker>
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label Text="Clasificación de la película: "
+                   HorizontalOptions="Center"/>
+                <Picker
+                x:Name="e9"
+                Title="Seleccione"
+                TitleColor="{AppThemeBinding Light=Black, Dark=White}"
+                ItemDisplayBinding="{Binding MovieDetail.classification}"
+                TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                Margin="10,0,10,10">
+                    <Picker.Items>
+                        <x:String>TP</x:String>
+                        <x:String>16+</x:String>
+                        <x:String>18+</x:String>
+                    </Picker.Items>
+                </Picker>
+            </VerticalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Sinopsis de la película: "/>
+                <Entry x:Name="e10"
+                   MaxLength="50"
+                   PlaceholderColor="{AppThemeBinding Light=Black, Dark=White}"
+                   Placeholder="Ejemplo: El ganador del año se convierte en el Top Gun."
+                   Text="{Binding MovieDetail.synopsis}"/>
+            </HorizontalStackLayout>
+            <Button Text="Save" Command="{Binding AddUpdateMovieCommand}"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
