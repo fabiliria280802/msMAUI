@@ -6,12 +6,11 @@
     xmlns:local="clr-namespace:msMAUI.Views"
     Shell.FlyoutBehavior="Disabled">
     <TabBar>
-        <!--
+
         <ShellContent
-        Title="Inicio"
-        ContentTemplate="{DataTemplate views:MainPage}"
-        Icon="homepage"/>
-        -->
+            Title="Inicio"
+            ContentTemplate="{DataTemplate views:MainPage}"
+            Icon="homepage"/>
 
         <ShellContent
             Title="Nuevo"

@@ -131,7 +131,7 @@ public partial class MoviePage : ContentPage
         //try
         //{
         App.msMAUIRepo.AddNewMovie(Item);
-        Shell.Current.GoToAsync("..");
+        Shell.Current.GoToAsync(AllMoviesPage);
         //}
         //catch (Exception ee)
         //{
@@ -143,7 +143,7 @@ public partial class MoviePage : ContentPage
     private void DeleteButton_Clicked(object sender, EventArgs e)
     {
         App.msMAUIRepo.DeleteItem(Item);
-        Shell.Current.GoToAsync("..");
+        Shell.Current.GoToAsync(nameof(AllMoviesPage));
         //Shell.Current.GoToAsync(nameof(MainPage));
         /*if (BindingContext is Models.Movie movie)
         {
@@ -157,7 +157,7 @@ public partial class MoviePage : ContentPage
 
     private void OnCancelClicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("..");
+        Shell.Current.GoToAsync(AllMoviesPage);
         //Shell.Current.GoToAsync(nameof(MainPage));
     }
     /*
