@@ -6,29 +6,24 @@
     xmlns:local="clr-namespace:msMAUI.Views"
     Shell.FlyoutBehavior="Disabled">
     <TabBar>
-
         <ShellContent
             Title="Inicio"
             ContentTemplate="{DataTemplate local:MainPage}"
             Icon="homepage"/>
-
-        <ShellContent
-            Title="Nuevo"
-            ContentTemplate="{DataTemplate local:MoviePage}"
-            Route="MoviePage"
-            Icon="play"/>
-
         <ShellContent
             Title="Biblioteca"
             ContentTemplate="{DataTemplate local:AllMoviesPage}"
             Route="AllMoviesPage"
             Icon="moviereel"/>
-
+        <ShellContent
+            Title="Nuevo"
+            ContentTemplate="{DataTemplate local:MoviePage}"
+            Route="MoviePage"
+            Icon="play"/>
         <ShellContent
             Title="Nosotrxs"
             ContentTemplate="{DataTemplate local:AboutPage}"
             Route="AboutPage"
             Icon="infobutton" />
-
     </TabBar>
 </Shell>
