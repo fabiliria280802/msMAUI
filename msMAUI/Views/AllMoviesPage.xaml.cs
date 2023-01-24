@@ -17,7 +17,6 @@ public partial class AllMoviesPage : ContentPage
             ["Item"] = new Movie()
         });
     }
-
     private void OnUpdate(object sender, EventArgs e)
     {
         //fetch new items and update the Burgers property
