@@ -37,7 +37,6 @@ public partial class AllMoviesPage : ContentPage
         movieList.ItemsSource = newMovies;
         //base.OnNavigatedTo(args);
     }
-
     private void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         //Aqui falta codigo que tome el item seleccionado y lo pase a la pagina FLBurgerItemPage
