@@ -5,8 +5,8 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
     }
-    private void GoToButtom(object sender, EventArgs e)
+    private async void GoToButtom(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync(nameof(AboutPage));
+        await Shell.Current.GoToAsync("///AboutPage");
     }
 }

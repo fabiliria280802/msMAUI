@@ -17,17 +17,17 @@ public partial class MoviePage : ContentPage
     private void OnSaveClicked(object sender, EventArgs e)
     {
         App.msMAUIRepo.AddNewMovie(Item);
-        Shell.Current.GoToAsync(nameof(AllMoviesPage));
+        Shell.Current.GoToAsync("..");
     }
     private void DeleteButton_Clicked(object sender, EventArgs e)
     {
         App.msMAUIRepo.DeleteItem(Item);
-        Shell.Current.GoToAsync(nameof(AllMoviesPage));
+        Shell.Current.GoToAsync("..");
     }
 
     private void OnCancelClicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync(nameof(AllMoviesPage));
+        Shell.Current.GoToAsync("..");
         //Shell.Current.GoToAsync(nameof(MainPage));
     }
     private void e8_SelectedIndexChanged(object sender, EventArgs e)
