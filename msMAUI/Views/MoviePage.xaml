@@ -41,21 +41,19 @@
             <Entry x:Name="e1"
                    MaxLength="50"
                    Placeholder="Ejemplo: Top Gun"
-                   Text="{Binding title}"
-                   TextChanged="e1_TextChanged_1"/>
-            <Label Text="Año de la película: " HorizontalOptions="Center"/>
+                   Text="{Binding title}"/>
+            <Label Text="Año de la película: "
+                   HorizontalOptions="Center"/>
             <Entry x:Name="e3"
                    MaxLength="4"
                    Placeholder="Ejemplo: 2002"
                    Keyboard="Numeric"
-                   Text="{Binding year}"
-                   TextChanged="e3_TextChanged"/>
+                   Text="{Binding year}"/>
             <Label Text="Director de la película:"
                    HorizontalOptions="Center"/>
             <Entry x:Name="e4"
                    MaxLength="50"
                    Placeholder="Ejemplo: Tim Burton"
-                   TextChanged="e4_TextChanged"
                    Text="{Binding director}"/>
             <Grid ColumnDefinitions="*,*"
                   ColumnSpacing="4"
@@ -82,7 +80,6 @@
                    MaxLength="30"
                    Keyboard="Numeric"
                    Placeholder="Ejemplo: 1000000"
-                   TextChanged="e6_TextChanged"
                    Text="{Binding income}"/>
 
             <Label Text="Distribuidor de la película: "
@@ -90,8 +87,7 @@
             <Entry x:Name="e7"
                    MaxLength="30"
                    Placeholder="Ejemplo: Universal Pictures"
-                   Text="{Binding distributor}"
-                   TextChanged="e7_TextChanged"/>
+                   Text="{Binding distributor}"/>
             <Label Text="Género de la película: "
                    HorizontalOptions="Center"/>
             <Picker x:Name="e8"
@@ -133,8 +129,7 @@
             <Entry x:Name="e10"
                    MaxLength="50"
                    Placeholder="Ejemplo: El ganador del año se convierte en el Top Gun."
-                   Text="{Binding synopsis}"
-                   TextChanged="e10_TextChanged"/>
+                   Text="{Binding synopsis}"/>
             <Button
                 Text="Guardar"
                 Clicked="OnSaveClicked"

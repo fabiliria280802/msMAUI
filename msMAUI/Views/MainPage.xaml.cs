@@ -1,7 +1,4 @@
-using static Android.Content.ClipData;
-
 namespace msMAUI.Views;
-
 public partial class MainPage : ContentPage
 {
     public MainPage()

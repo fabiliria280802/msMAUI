@@ -9,7 +9,7 @@
 
         <ShellContent
             Title="Inicio"
-            ContentTemplate="{DataTemplate views:MainPage}"
+            ContentTemplate="{DataTemplate local:MainPage}"
             Icon="homepage"/>
 
         <ShellContent
