@@ -120,7 +120,7 @@
                        Placeholder="Ejemplo: El ganador del año se convierte en el Top Gun."
                        Text="{Binding MovieDetail.synopsis}"/>
             </VerticalStackLayout>
-            <Button Text="Save" Command="{Binding AddUpdateMovieCommand}"/>
+            <Button Text="Save" Command="{Binding AddUpdateMovieDetailViewCommand}"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>

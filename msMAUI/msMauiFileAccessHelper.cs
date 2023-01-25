@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
 namespace msMAUI
 {
     public class msMauiFileAccessHelper
@@ -13,4 +13,4 @@ namespace msMAUI
             return System.IO.Path.Combine(FileSystem.AppDataDirectory, filename);
         }
     }
-}
+}*/

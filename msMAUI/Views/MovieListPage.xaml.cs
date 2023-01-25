@@ -1,4 +1,3 @@
-using AndroidX.Lifecycle;
 using msMAUI.ViewModels;
 namespace msMAUI.Views;
 public partial class MovieListPage : ContentPage

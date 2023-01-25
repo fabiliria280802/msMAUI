@@ -1,7 +1,7 @@
-﻿//using Microsoft.Toolkit.Mvvm.ComponentModel;
-//using Microsoft.Toolkit.Mvvm.Input;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
+﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
+using Microsoft.Toolkit.Mvvm.Input;
+//using CommunityToolkit.Mvvm.ComponentModel;
+//using CommunityToolkit.Mvvm.Input;
 using msMAUI.Models;
 using msMAUI.Services;
 using msMAUI.Views;
@@ -17,7 +17,8 @@ namespace msMAUI.ViewModels
         {
             _movieService = movieService;
         }
-        [RelayCommand]
+        //[RelayCommand]
+        [ICommand]
         public async void GetMovieList()
         {
             var movieList = await _movieService.GetMovieList();
@@ -30,13 +31,14 @@ namespace msMAUI.ViewModels
                 }
             }
         }
-        [RelayCommand]
+        //[RelayCommand]
+        [ICommand]
         public async void AddUpdateMovie()
         {
             await AppShell.Current.GoToAsync(nameof(AddUpdateMovieDetailViewModel));
         }
-        /*
-        [RelayCommand]
+        [ICommand]
+        //[RelayCommand]
         public async void DisplayAction(Movie movie)
         {
             var response = await AppShell.Current.DisplayActionSheet("Select Option", "OK", null, "Edit", "Delete");
@@ -54,6 +56,6 @@ namespace msMAUI.ViewModels
                     GetMovieList();
                 }
             }
-        }*/
+        }
     }
 }
