@@ -7,7 +7,7 @@ public partial class MovieListPage : ContentPage
     {
         InitializeComponent();
         _viewMode = viewModel;
-        this.BindingContext = viewModel;
+        this.BindingContext = _viewMode;
     }
     protected override void OnAppearing()
     {

@@ -1,5 +1,4 @@
-﻿//using msMAUI.Data;
-using msMAUI.Views;
+﻿using msMAUI.Views;
 using msMAUI.ViewModels;
 using msMAUI.Services;
 namespace msMAUI;
@@ -24,10 +23,6 @@ public static class MauiProgram
         //View Models
         builder.Services.AddSingleton<MovieListPageViewModel>();
         builder.Services.AddSingleton<AddUpdateMovieDetailViewModel>();
-        /*
-        string dbPath = msMauiFileAccessHelper.GetLocalFilePath("movie.db3");
-        builder.Services.AddSingleton<msMauiDatabase>(s => ActivatorUtilities.CreateInstance<msMauiDatabase>(s, dbPath));
-        */
         return builder.Build();
     }
 }
