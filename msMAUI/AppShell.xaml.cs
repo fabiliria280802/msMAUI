@@ -8,3 +8,4 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(AddUpdateMovieDetail), typeof(AddUpdateMovieDetail));
     }
 }
+

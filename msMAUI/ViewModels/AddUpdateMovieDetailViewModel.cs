@@ -1,8 +1,5 @@
-﻿//using CommunityToolkit.Mvvm.ComponentModel;
-//using CommunityToolkit.Mvvm.Input;
-//using CommunityToolkit.Mvvm.Input;
-using Microsoft.Toolkit.Mvvm.ComponentModel;
-using Microsoft.Toolkit.Mvvm.Input;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using msMAUI.Models;
 using msMAUI.Services;
 
@@ -19,8 +16,7 @@ namespace msMAUI.ViewModels
         {
             _movieService = movieService;
         }
-        //[RelayCommand]
-        [ICommand]
+        [RelayCommand]
         public async void AddUpdateMovie()
         {
             int response = -1;
