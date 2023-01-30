@@ -116,7 +116,7 @@
             <VerticalStackLayout>
                 <Label Text="Sinopsis de la película: "/>
                 <Entry x:Name="e10"
-                       MaxLength="50"
+                       MaxLength="90"
                        Placeholder="Ejemplo: El ganador del año se convierte en el Top Gun."
                        Text="{Binding MovieDetail.synopsis}"/>
             </VerticalStackLayout>
