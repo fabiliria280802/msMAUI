@@ -6,14 +6,13 @@
              x:DataType="viewModels:MovieListPageViewModel"
              x:Class="msMAUI.Views.MovieListPage"
              Title="Biblioteca de películas">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Command="{Binding AddUpdateMovieCommand}" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Label">
                 <Setter Property="FontSize" Value="14"/>
-                <Setter Property="TextColor" Value="{AppThemeBinding Light=White, Dark=Black}"/>
-            </Style>
-            <Style TargetType="Button">
-                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=Black, Dark=White}"/>
                 <Setter Property="TextColor" Value="{AppThemeBinding Light=White, Dark=Black}"/>
             </Style>
             <Style TargetType="Frame">
@@ -43,7 +42,6 @@
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
-                    <Button Text="Añadir nuevo" Command="{Binding AddUpdateMovieCommand}" HorizontalOptions="EndAndExpand"/>
                 </Grid>
             </VerticalStackLayout>
         </StackLayout>

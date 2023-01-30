@@ -49,6 +49,7 @@ namespace msMAUI.ViewModels
                 var delResponse = await _movieService.DeleteMovie(movie);
                 if (delResponse > 0)
                 {
+                    Movies.Remove(movie);
                     GetMovieList();
                 }
             }
