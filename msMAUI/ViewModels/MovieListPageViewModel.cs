@@ -37,7 +37,7 @@ namespace msMAUI.ViewModels
         [RelayCommand]
         public async void DisplayAction(Movie movie)
         {
-            var response = await AppShell.Current.DisplayActionSheet("Select Option", "OK", null, "Edit", "Delete");
+            var response = await AppShell.Current.DisplayActionSheet("Select Option", "OK", null, "Edit", "Delete", "Details");
             if (response == "Edit")
             {
                 var navParam = new Dictionary<string, object>();
@@ -52,6 +52,37 @@ namespace msMAUI.ViewModels
                     Movies.Remove(movie);
                     GetMovieList();
                 }
+            }
+            else if (response == "Details")
+            {
+                ShowMovieDetails(movie);
+            }
+        }
+        private async void ShowMovieDetails(Movie movie)
+        {
+            if (movie.shortFilm.Equals(true))
+            {
+                string details = "Title: " + movie.title + "\n" +
+                "Director: " + movie.director + "\n" +
+                "Year: " + movie.year + "\n" +
+                "Income: " + movie.income + "\n" +
+                "ShortFilm: Yes" + "\n" +/*
+                "Gender: " + movie.gender + "\n" +
+                "Classification: " + movie.classification + "\n" +*/
+                "Description: " + movie.synopsis;
+                await AppShell.Current.DisplayAlert("Details", details, "OK");
+            }
+            else
+            {
+                string details = "Title: " + movie.title + "\n" +
+                "Director: " + movie.director + "\n" +
+                "Year: " + movie.year + "\n" +
+                "Income: " + movie.income + "\n" +
+                "ShortFilm: No" + "\n" +/*
+                "Gender: " + movie.gender + "\n" +
+                "Classification: " + movie.classification + "\n" +*/
+                "Description: " + movie.synopsis;
+                await AppShell.Current.DisplayAlert("Details", details, "OK");
             }
         }
     }

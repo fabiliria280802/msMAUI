@@ -2,7 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using msMAUI.Models;
 using msMAUI.Services;
-
+using msMAUI.Views;
 
 namespace msMAUI.ViewModels
 {
@@ -43,6 +43,7 @@ namespace msMAUI.ViewModels
             if (response > 0)
             {
                 await Shell.Current.DisplayAlert("Student Info Saved", "Record Saved ", "OK");
+                await Shell.Current.GoToAsync("///MovieListPage");
             }
             else
             {
