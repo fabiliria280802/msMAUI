@@ -61,6 +61,7 @@
 		<None Remove="Resources\Images\cornparty.png" />
 		<None Remove="Resources\cornparty.png" />
 		<None Remove="Newtonsoft.Json" />
+		<None Remove="Resources\Images\comment.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -100,6 +101,7 @@
 		<BundleResource Include="Resources\Images\cornparty.png" />
 		<BundleResource Include="Resources\Images\cornparty.png" />
 		<BundleResource Include="Resources\cornparty.png" />
+		<BundleResource Include="Resources\Images\comment.png" />
 	</ItemGroup>
 	<ItemGroup>
 		<MauiImage Remove="Resources\Images\cornparty.png" />
