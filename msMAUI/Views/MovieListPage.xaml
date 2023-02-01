@@ -30,11 +30,6 @@
                                 <Frame Margin="10" Padding="10">
                                     <StackLayout Margin="10">
                                         <VerticalStackLayout Spacing="15">
-                                            <Image x:Name="Imagen"
-                                                   Source="{Binding portadaPath}"
-                                                   HeightRequest="200"
-                                                   WidthRequest="200"
-                                                   HorizontalOptions="Center"/>
                                             <Label Text="{Binding title}" FontSize="18" FontAttributes="Bold"/>
                                             <Label Text="{Binding synopsis}" FontSize="15" FontAttributes="Italic"/>
                                         </VerticalStackLayout>

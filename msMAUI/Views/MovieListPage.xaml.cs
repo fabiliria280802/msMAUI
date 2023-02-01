@@ -14,4 +14,5 @@ public partial class MovieListPage : ContentPage
         base.OnAppearing();
         _viewMode.GetMovieListCommand.Execute(null);
     }
+
 }

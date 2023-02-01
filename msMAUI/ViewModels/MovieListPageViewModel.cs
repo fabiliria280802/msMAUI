@@ -5,8 +5,6 @@ using msMAUI.Models;
 using msMAUI.Services;
 using msMAUI.Views;
 using System.Collections.ObjectModel;
-using static Android.Telecom.Call;
-
 namespace msMAUI.ViewModels
 {
     public partial class MovieListPageViewModel : ObservableObject
