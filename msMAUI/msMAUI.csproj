@@ -60,6 +60,7 @@
 		<None Remove="Resources\Images\corncito.png" />
 		<None Remove="Resources\Images\cornparty.png" />
 		<None Remove="Resources\cornparty.png" />
+		<None Remove="Newtonsoft.Json" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -71,6 +72,9 @@
 		</MauiXaml>
 		<MauiXaml Update="Views\MovieListPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\ReviewsPage.xaml">
+		  <SubType></SubType>
 		</MauiXaml>
 	</ItemGroup>
 
@@ -107,5 +111,6 @@
 		<PackageReference Include="SQLitePCLRaw.core" Version="2.1.4" />
 		<PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.4" />
 		<PackageReference Include="SQLitePCLRaw.provider.sqlite3" Version="2.1.4" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
 	</ItemGroup>
 </Project>

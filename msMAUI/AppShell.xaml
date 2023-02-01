@@ -43,5 +43,11 @@
             Route="AboutPage"
             Icon="infobutton" />
 
+        <ShellContent
+            Title="Reseñas"
+            ContentTemplate="{DataTemplate local:ReviewsPage}"
+            Route="ReviewsPage"
+            Icon="infobutton" />
+
     </TabBar>
 </Shell>
