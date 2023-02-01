@@ -5,6 +5,7 @@ using msMAUI.Models;
 using msMAUI.Services;
 using msMAUI.Views;
 using System.Collections.ObjectModel;
+using static Android.Telecom.Call;
 
 namespace msMAUI.ViewModels
 {
@@ -37,7 +38,7 @@ namespace msMAUI.ViewModels
         [RelayCommand]
         public async void DisplayAction(Movie movie)
         {
-            var response = await AppShell.Current.DisplayActionSheet("Select Option", "OK", null, "Edit", "Delete", "Details");
+            var response = await AppShell.Current.DisplayActionSheet("Select Option", "OK", null, "Edit", "Delete", "Details"/*, "Poster"*/);
             if (response == "Edit")
             {
                 var navParam = new Dictionary<string, object>();
@@ -56,7 +57,12 @@ namespace msMAUI.ViewModels
             else if (response == "Details")
             {
                 ShowMovieDetails(movie);
-            }
+            }/*
+            else if (response == "Poster")
+            {
+                var posterResponse = movie.portadaPath;
+                await AppShell.Current.DisplayAlert("Details", posterResponse, "OK");
+            }*/
         }
         private async void ShowMovieDetails(Movie movie)
         {
