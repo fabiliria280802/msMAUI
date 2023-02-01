@@ -11,14 +11,21 @@
         <DataTemplate>
           <ViewCell>
             <StackLayout Padding="10">
-              <Label Text="Título: " />
+              <Label Text="Título"
+                     FontAttributes="Bold"
+                     FontSize="20"/>
               <Label Text="{Binding name}"
-                     FontAttributes="Bold"/>
-              <Label Text="Correo del usuario: " />
+                     FontSize="15"/>
+              <Label Text="Correo del usuario"
+                     FontAttributes="Bold"
+                     FontSize="20"/>
               <Label Text="{Binding email}"
-                     FontAttributes="Italic"/>
-              <Label Text="Reseña: " />
-              <Label Text="{Binding body}" />
+                     FontSize="15"/>
+              <Label Text="Reseña"
+                     FontAttributes="Bold"
+                     FontSize="20"/>
+              <Label Text="{Binding body}"
+                     FontSize="15"/>
             </StackLayout>
           </ViewCell>
         </DataTemplate>
