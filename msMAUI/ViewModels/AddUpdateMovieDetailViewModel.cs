@@ -43,12 +43,12 @@ namespace msMAUI.ViewModels
 
             if (response > 0)
             {
-                await Shell.Current.DisplayAlert("Student Info Saved", "Record Saved ", "OK");
+                await Shell.Current.DisplayAlert("Película añadida", "Información guardada con éxito", "OK");
                 await Shell.Current.GoToAsync("///MovieListPage");
             }
             else
             {
-                await Shell.Current.DisplayAlert("Heads up!", "Something went wrong while adding record", "OK");
+                await Shell.Current.DisplayAlert("Hubo un problema!", "Verifica e intenta de nuevo", "OK");
 
             }
         }
