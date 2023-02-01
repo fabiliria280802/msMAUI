@@ -11,10 +11,13 @@
         <DataTemplate>
           <ViewCell>
             <StackLayout Padding="10">
+              <Label Text="Título: " />
               <Label Text="{Binding name}"
                      FontAttributes="Bold"/>
+              <Label Text="Correo del usuario: " />
               <Label Text="{Binding email}"
                      FontAttributes="Italic"/>
+              <Label Text="Reseña: " />
               <Label Text="{Binding body}" />
             </StackLayout>
           </ViewCell>
