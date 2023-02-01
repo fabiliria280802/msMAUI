@@ -38,7 +38,7 @@
             Icon="moviereel"/>
 -->
         <ShellContent
-            Title="Nosotrxs"
+            Title="Nosotros"
             ContentTemplate="{DataTemplate local:AboutPage}"
             Route="AboutPage"
             Icon="infobutton" />
