@@ -41,6 +41,15 @@
                        Text="{Binding MovieDetail.title}"/>
             </VerticalStackLayout>
             <VerticalStackLayout>
+                <Image
+                x:Name="Imagen"
+                Source="{Binding MovieDetail.portadaPath}"
+                HeightRequest="400"
+                WidthRequest="400"
+                HorizontalOptions="Center"/>
+                <Button Text="Subir imagen" Clicked="UploadImageClicked" />
+            </VerticalStackLayout>
+            <VerticalStackLayout>
                 <Label Text="Año de la película: " HorizontalOptions="Center"/>
                 <Entry x:Name="e3"
                        MaxLength="4"

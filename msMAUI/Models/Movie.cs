@@ -23,5 +23,6 @@ namespace msMAUI.Models
         public string gender { get; set; }
         public string classification { get; set; }
         public string synopsis { get; set; }
+        public string portadaPath { get; set; }
     }
 }

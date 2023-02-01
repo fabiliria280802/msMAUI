@@ -84,6 +84,7 @@ namespace msMAUI.ViewModels
                 "Description: " + movie.synopsis;
                 await AppShell.Current.DisplayAlert("Details", details, "OK");
             }
+            //Image ImagePortada = Image.SourceProperty(movie.portadaPath);
         }
     }
 }

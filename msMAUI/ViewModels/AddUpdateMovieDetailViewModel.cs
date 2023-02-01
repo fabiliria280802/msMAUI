@@ -36,7 +36,8 @@ namespace msMAUI.ViewModels
                     distributor = MovieDetail.distributor,
                     gender = MovieDetail.gender,
                     classification = MovieDetail.classification,
-                    synopsis = MovieDetail.synopsis
+                    synopsis = MovieDetail.synopsis,
+                    portadaPath= MovieDetail.portadaPath
                 });
             }
 
